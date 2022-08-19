@@ -16,11 +16,67 @@
     src: url('../fonts/Avenir.eot?#iefix') format('embedded-opentype') url('../fonts/Avenir.ttf') format('truetype'), url('../fonts/Avenir.svg#Avenir') format('svg');
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Avenir', Helvetica, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
     color: unset;
+}
+
+header {
+    color: var(--primary-color);
+}
+
+header nav {
+    position: fixed;
+    display: none;
+}
+
+header #carousel div:first-of-type {
+    position: absolute;
+    width: 75vw;
+    left: 12.5vw;
+    top: 4rem;
+}
+
+header #carousel div h1 {
+    font-size: 1.563rem;
+}
+
+header #carousel div p {
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-top: 0.625rem;
+}
+
+header #carousel div:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+header #carousel div img {
+    height: 27.375rem;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+header #carousel div img.left {
+    object-position: 30% 50%;
+}
+
+header #carousel div img.right {
+    object-position: 90% 50%;
+}
+
+footer {
+    text-align: left;
 }
