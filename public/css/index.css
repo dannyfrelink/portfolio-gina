@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #fdfdfd;
+    --secondary-color: #EFE2D9;
+    --overlay-color: #E6CDB9;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/Avenir.eot?#iefix') format('embedded-opentype') url('../fonts/Avenir.ttf') format('truetype'), url('../fonts/Avenir.svg#Avenir') format('svg');
+}
+
+body {
+    font-family: 'Avenir', Helvetica, sans-serif;
+}
