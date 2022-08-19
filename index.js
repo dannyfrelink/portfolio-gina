@@ -7,9 +7,14 @@ const PORT = process.env.PORT || 5151;
 // const server = http.createServer(app);
 // const { Server } = require('socket.io');
 // const io = new Server(server);
-// const fetch = require('node-fetch');
+const fetch = require('node-fetch');
 
-app.use(express.static('static'));
+fetch('http://localhost:5151/assets.json')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
