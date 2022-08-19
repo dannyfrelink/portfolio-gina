@@ -8,17 +8,72 @@
 <body>
     <header>
         <nav>
-            <a href="/">Home</a>
-            <a href="/overmij">Over mij</a>
-            <a href="/portfolio">Bruiloft fotografie</a>
-            <a href="/tarieven">Tarieven</a>
-            <a href="#contact">Contact</a>
+            <div>
+                <a href="/">Home</a>
+                <a href="/overmij">Over mij</a>
+                <a href="/portfolio">Bruiloft fotografie</a>
+                <a href="/tarieven">Tarieven</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/GinatenHoopePhotography/">
+                    <img src="/assets/icons/facebook-64.png" alt="Facebook icoon">
+                </a>
+                <a href="https://www.instagram.com/photosbygina_/">
+                    <img src="/assets/icons/instagram-64.png" alt="Instagram icoon">
+                </a>
+            </div>
         </nav>
+
+        <section>
+            <h1>Gina ten Hoope Photography</h1>
+            <p>Professioneel bruidsfotograaf</p>
+            <img src="/assets/landscape-1.jpeg" alt="Carousel foto 1">
+            <img src="/assets/landscape-2.jpeg" alt="Carousel foto 2">
+            <img src="/assets/landscape-3.jpeg" alt="Carousel foto 3">
+            <img src="/assets/landscape-4.jpeg" alt="Carousel foto 4">
+            <img src="/assets/landscape-5.jpeg" alt="Carousel foto 5">
+            <img src="/assets/landscape-6.jpeg" alt="Carousel foto 6">
+        </section>
     </header>
 
     <main>
-        <h2 id="contact">Contact</h2>
+        <section>
+            <h2>
+                “Momenten van nu vastleggen, welke morgen je hart verbazen”
+            </h2>
+            <p>
+                "Ik kan het niet anders samenvatten dan dat Gina een super goede fotografe is met oog voor detail! Ze
+                stelt je echt op je gemak waardoor de foto’s geen gemaakt karakter krijgen.
+            </p>
+            <p>
+                Wat ik zelf heel belangrijk vind dat is een fotograaf aanwezig is zonder dat je het merkt en dat is ze.
+                Na bewerking spatte de kleuren echt van de foto. Wij zouden Gina zeker aanbevelen als (bruids)fotograaf
+                en zijn heel blij met het eindresultaat.❤️"
+            </p>
+            <p>~Walter & Ilona</p>
+        </section>
+
+        <section>
+            <article>
+                <img src="/assets/portrait-1.jpeg" alt="Portret foto">
+                <h2>Bekijk meer van mijn bruiloft fotografie</h2>
+                <a href="">Bruiloft foto's bekijken</a>
+            </article>
+            <article>
+                <img src="/assets/portrait-2.jpeg" alt="Portret foto">
+                <h2>Leer mij wat beter kennen</h2>
+                <a href="">Meer over mij</a>
+            </article>
+            <article>
+                <img src="/assets/portrait-3.jpeg" alt="Portret foto">
+                <h2>Wat zijn mijn tarieven</h2>
+                <a href="">Tarieven bekijken</a>
+            </article>
+        </section>
     </main>
+
+    <%- include('layout/contact'); %>
 </body>
 
 </html>
