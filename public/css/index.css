@@ -55,6 +55,7 @@ header nav {
     display: none;
 }
 
+/* Home page styling */
 header #carousel>div:first-of-type {
     position: absolute;
     width: 85vw;
@@ -170,4 +171,47 @@ main #links a div p {
 
 footer {
     text-align: left;
+    width: 85vw;
+    margin: auto;
+}
+
+footer.tranform_footer {
+    transform: translateY(-1rem);
+}
+
+footer #footer_line {
+    height: 2rem;
+    width: 2px;
+    background-color: black;
+    margin: auto;
+}
+
+footer h2 {
+    font-size: var(--big-text-size);
+    width: fit-content;
+    margin: auto;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer form * {
+    font-size: var(--small-text-size);
+    margin-top: 2rem;
+}
+
+footer form input[type="text"],
+textarea {
+    font-family: inherit;
+    border: unset;
+    outline: unset;
+    border-bottom: 1.5px solid rgba(0, 0, 0, .5);
+    opacity: 0.6;
+}
+
+footer form input[type="submit"] {
+    background-color: unset;
+    border: 1.5px solid black;
 }
