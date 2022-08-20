@@ -31,6 +31,8 @@ body {
 }
 
 a {
+    display: block;
+    width: fit-content;
     text-decoration: none;
     color: unset;
 }
@@ -53,10 +55,10 @@ header nav {
     display: none;
 }
 
-header #carousel div:first-of-type {
+header #carousel>div:first-of-type {
     position: absolute;
-    width: 75vw;
-    left: 12.5vw;
+    width: 85vw;
+    left: 7.5vw;
     top: 4rem;
 }
 
@@ -67,6 +69,28 @@ header #carousel div h1 {
 header #carousel div p {
     font-weight: bold;
     margin-top: 0.625rem;
+}
+
+header #carousel div div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11.25rem;
+}
+
+header #carousel div div button {
+    font-size: 3rem;
+    color: var(--primary-color);
+    background-color: unset;
+    border: unset;
+    opacity: 0.8;
+}
+
+header #carousel div div #previous::before {
+    content: '\2039';
+}
+
+header #carousel div div #next::before {
+    content: '\203A';
 }
 
 header #carousel div:nth-of-type(2) {
@@ -105,6 +129,43 @@ main #review h2 {
 
 main #review p {
     margin-top: 0.625rem;
+}
+
+main #links {
+    background-color: var(--secondary-color);
+    transform: translateY(-1rem);
+}
+
+main #links a {
+    width: 73.33vw;
+    margin: auto;
+    padding-top: 2.5rem;
+}
+
+main #links a:last-of-type {
+    padding-bottom: 2.5rem;
+}
+
+main #links a img {
+    width: 73.33vw;
+    height: 21.125rem;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+}
+
+main #links a div {
+    background-color: var(--overlay-color);
+    padding: 1.25rem;
+    transform: translateY(-0.625rem);
+}
+
+main #links a div p {
+    width: fit-content;
+    font-size: var(--small-text-size);
+    border-bottom: 1.5px solid black;
+    margin: 0.625rem auto 0;
+    padding-bottom: 0.3rem;
 }
 
 footer {
