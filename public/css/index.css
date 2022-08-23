@@ -195,6 +195,7 @@ footer h2 {
 footer form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.5rem;
 }
 
 footer form * {
@@ -208,10 +209,31 @@ textarea {
     border: unset;
     outline: unset;
     border-bottom: 1.5px solid rgba(0, 0, 0, .5);
-    opacity: 0.6;
 }
 
 footer form input[type="submit"] {
+    width: fit-content;
     background-color: unset;
     border: 1.5px solid black;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.25rem 0.6rem;
+}
+
+footer section p {
+    margin-bottom: 0.5rem;
+}
+
+footer section div {
+    display: flex;
+}
+
+footer section div a img {
+    width: 1.4rem;
+    margin-right: 0.9rem;
+}
+
+footer>p {
+    text-align: center;
+    margin-top: 0.5rem;
 }
