@@ -169,6 +169,86 @@ main #links a div p {
     padding-bottom: 0.3rem;
 }
 
+/* About me page styling */
+#about_body header::before {
+    content: '';
+    position: absolute;
+    top: -35vw;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    transform: skewY(-35deg);
+    height: 100vh;
+    z-index: -1;
+}
+
+.about_section {
+    text-align: left;
+    width: 85vw;
+    margin: auto;
+}
+
+.about_section:first-of-type {
+    margin-top: 4rem;
+}
+
+.about_section:last-of-type {
+    padding-bottom: 3rem;
+}
+
+#about_body main {
+    position: relative;
+}
+
+#about_body main::before {
+    content: '';
+    position: absolute;
+    bottom: -35vw;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(35deg, transparent 0% 28.2%, var(--secondary-color) 28.2% 100%);
+    /* background-color: var(--secondary-color); */
+    transform: skewY(-35deg);
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.about_section img {
+    width: 19.922rem;
+    height: 25.563rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about_section article {
+    background-color: var(--overlay-color);
+    padding: 1.375rem 1.25rem;
+}
+
+.about_section article:last-child,
+.about_section img:last-child {
+    transform: translateY(-0.4rem);
+}
+
+.about_section article p {
+    margin-top: 0.5rem;
+}
+
+.about_section article a {
+    font-size: var(--small-text-size);
+    margin-top: 1rem;
+}
+
+#banner_photo {
+    width: 85vw;
+    height: 11.25rem;
+    object-fit: cover;
+    object-position: 50% 35%;
+    margin: 1.75rem;
+}
+
+/* Contact form styling */
 footer {
     text-align: left;
     width: 85vw;
@@ -211,13 +291,17 @@ textarea {
     border-bottom: 1.5px solid rgba(0, 0, 0, .5);
 }
 
-footer form input[type="submit"] {
+footer form input[type="submit"],
+main .about_section a {
     width: fit-content;
     background-color: unset;
     border: 1.5px solid black;
     border-radius: 0.5rem;
-    margin-top: 1.5rem;
     padding: 0.25rem 0.6rem;
+}
+
+footer form input[type="submit"] {
+    margin-top: 1.5rem;
 }
 
 footer section p {

@@ -13,7 +13,11 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('home');
+});
+
+app.get('/overmij', (req, res) => {
+    res.render('about');
 });
 
 app.use((req, res) => {
