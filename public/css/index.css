@@ -375,7 +375,7 @@ header #portfolio_header img {
 
 header #portfolio_header #image_blur {
     position: absolute;
-    bottom: -2rem;
+    bottom: -2.25rem;
     width: 100vw;
     height: 4rem;
     background-image: linear-gradient(0deg, var(--primary-color) 45%, transparent 100%);

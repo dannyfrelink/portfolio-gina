@@ -5,7 +5,7 @@ hamburgerMenu.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('open');
 });
 
-if (location.pathname === '/') {
+if (location.pathname === '/' || location.pathname === '/portfolio') {
     footer.classList.add('tranform_footer');
 }
 
