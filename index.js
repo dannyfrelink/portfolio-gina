@@ -7,7 +7,12 @@ const PORT = process.env.PORT || 5151;
 // const server = http.createServer(app);
 // const { Server } = require('socket.io');
 // const io = new Server(server);
-// const fetch = require('node-fetch');
+const fetch = require('node-fetch');
+
+fetch('http://localhost:5151/test.json')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
