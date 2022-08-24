@@ -30,6 +30,10 @@ body {
     overflow-x: hidden;
 }
 
+main.transform_main {
+    transform: translateY(-2.375rem);
+}
+
 a {
     display: block;
     width: fit-content;
@@ -211,27 +215,29 @@ header #carousel div img.right {
     object-position: 90% 50%;
 }
 
-main #review {
+main #review,
+main #working_method {
     background-color: var(--primary-color);
     width: calc(85vw - (0.625rem*2));
     margin: auto;
     padding: 0.625rem;
-    transform: translateY(-2.375rem);
 }
 
-main #review h2 {
+main #review h2,
+main #working_method h2 {
     font-style: italic;
     width: 90%;
     margin: auto;
 }
 
-main #review p {
+main #review p,
+main #working_method p {
     margin-top: 0.625rem;
 }
 
 main #links {
     background-color: var(--secondary-color);
-    transform: translateY(-1rem);
+    margin-top: 1.375rem;
 }
 
 main #links a {
@@ -245,6 +251,7 @@ main #links a:last-of-type {
 }
 
 main #links a img {
+    display: block;
     width: 73.33vw;
     height: 21.125rem;
     object-fit: cover;
@@ -255,7 +262,6 @@ main #links a img {
 main #links a div {
     background-color: var(--overlay-color);
     padding: 1.25rem;
-    transform: translateY(-0.625rem);
 }
 
 main #links a div p {
@@ -304,7 +310,6 @@ main #links a div p {
     left: 0;
     right: 0;
     background-image: linear-gradient(35deg, transparent 0% 28.2%, var(--secondary-color) 28.2% 100%);
-    /* background-color: var(--secondary-color); */
     transform: skewY(-35deg);
     height: 100vh;
     width: 100vw;
@@ -323,16 +328,18 @@ main #links a div p {
     padding: 1.375rem 1.25rem;
 }
 
-.about_section article:last-child,
-.about_section img:last-child {
-    transform: translateY(-0.4rem);
+.about_section article:first-child,
+.about_section img:first-child {
+    display: flex;
+    flex-direction: column;
 }
 
 .about_section article p {
     margin-top: 0.5rem;
 }
 
-.about_section article a {
+.about_section article a,
+main #working_method div a {
     font-size: var(--small-text-size);
     margin-top: 1rem;
 }
@@ -345,6 +352,40 @@ main #links a div p {
     margin: 1.75rem;
 }
 
+/* Portfolio page styling */
+header #portfolio_header {
+    display: flex;
+    position: relative;
+    z-index: -1;
+}
+
+header #portfolio_header h1 {
+    position: absolute;
+    top: 4rem;
+    left: 7.5vw;
+    width: 85vw;
+}
+
+header #portfolio_header img {
+    height: 27.375rem;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+header #portfolio_header #image_blur {
+    position: absolute;
+    bottom: -2rem;
+    width: 100vw;
+    height: 4rem;
+    background-image: linear-gradient(0deg, var(--primary-color) 45%, transparent 100%);
+}
+
+main #working_method div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* Contact form styling */
 footer {
     text-align: left;
@@ -353,7 +394,9 @@ footer {
 }
 
 footer.tranform_footer {
-    transform: translateY(-1rem);
+    position: absolute;
+    left: 7.5vw;
+    transform: translateY(-2.375rem);
 }
 
 footer #footer_line {
@@ -389,7 +432,8 @@ textarea {
 }
 
 footer form input[type="submit"],
-main .about_section a {
+main .about_section a,
+main #working_method div a {
     width: fit-content;
     background-color: unset;
     border: 1.5px solid black;
@@ -416,5 +460,5 @@ footer section div a img {
 
 footer>p {
     text-align: center;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 1rem;
 }

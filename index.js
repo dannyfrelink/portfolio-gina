@@ -20,6 +20,10 @@ app.get('/overmij', (req, res) => {
     res.render('about');
 });
 
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio');
+});
+
 app.use((req, res) => {
     res.status(404).send('Sorry, could not find the page you were looking for.');
 });
