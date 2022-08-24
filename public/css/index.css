@@ -56,6 +56,7 @@ header #hamburger_menu {
     right: 7.5vw;
     height: 1.5rem;
     width: fit-content;
+    z-index: 2;
 }
 
 header #hamburger_menu.open~nav {
@@ -73,11 +74,25 @@ header #hamburger_menu div {
 header nav {
     position: fixed;
     display: none;
-    height: 25.938rem;
     width: 100vw;
     background-color: var(--secondary-color);
     color: black;
+    box-shadow: 0 7.5px 30px;
+    padding: 2.75rem 0;
     z-index: 1;
+}
+
+header nav::before {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #E8E8E8;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 header nav * {
@@ -90,14 +105,20 @@ header nav h2 {
     width: 70vw;
 }
 
+header nav div:first-of-type {
+    margin-top: 1rem;
+}
+
 header nav a {
     font-size: var(--medium-text-size);
     font-weight: 500;
+    margin-top: 0.5rem;
 }
 
 header nav #socials {
     display: flex;
     width: fit-content;
+    margin-top: 0.5rem;
 }
 
 header nav #socials img {
