@@ -51,7 +51,7 @@ header {
 }
 
 header #hamburger_menu {
-    position: absolute;
+    position: fixed;
     top: 1.25rem;
     right: 7.5vw;
     height: 1.5rem;
