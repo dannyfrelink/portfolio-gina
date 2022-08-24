@@ -59,6 +59,10 @@ header #hamburger_menu {
     z-index: 2;
 }
 
+header #hamburger_menu.open div {
+    background-color: black;
+}
+
 header #hamburger_menu.open~nav {
     display: block;
 }
@@ -78,7 +82,7 @@ header nav {
     background-color: var(--secondary-color);
     color: black;
     box-shadow: 0 7.5px 30px;
-    padding: 2.75rem 0;
+    padding: 4rem 0 3rem;
     z-index: 1;
 }
 
