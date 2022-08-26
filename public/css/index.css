@@ -263,11 +263,13 @@ main .links a img {
     border-radius: 50% 50% 0 0 / 40% 40% 0 0;
 }
 
-main .links a img.left {
+main .links a img.left,
+.about_section img.left {
     object-position: 30% 100%;
 }
 
-main .links a img.right {
+main .links a img.right,
+.about_section img.right {
     object-position: 70% 100%;
 }
 

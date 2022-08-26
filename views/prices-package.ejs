@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head'); %>
+</head>
+
+<body id="prices_body">
+    <header>
+        <%- include('layout/nav'); %>
+    </header>
+
+    <main>
+        <section class="about_section">
+            <% if(package=='4 uur' ) { %>
+                <img class="right" src="/assets/portrait-6.jpeg" alt="<%= package %> fotografie foto">
+                <% } else if(package=='2 uur' ) { %>
+                    <img src="/assets/portrait-7.jpeg" alt="<%= package %> fotografie foto">
+                    <% } else if(package=='1 uur' ) { %>
+                        <img class="left" src="/assets/portrait-8.jpeg" alt="<%= package %> fotografie foto">
+                        <% } %>
+                            <article>
+                                <h2>
+                                    <%= package %> fotografie
+                                </h2>
+                                <% if(package=='4 uur' ) { %>
+                                    <p>
+                                        Dit is 4 uur fotografie
+                                    </p>
+                                    <% } else if(package=='2 uur' ) { %>
+                                        <p>
+                                            Dit is 2 uur fotografie
+                                        </p>
+                                        <% } else if(package=='1 uur' ) { %>
+                                            <p>
+                                                Dit is 1 uur fotografie
+                                            </p>
+                                            <% } %>
+                                                <a href="#contact">Neem contact met mij op</a>
+                            </article>
+        </section>
+
+        <section class="links">
+            <h2>Overige pakketten</h2>
+            <a href="/tarieven">
+                <img src="/assets/portrait-5.jpeg" alt="Bruiloft tarieven foto">
+                <div>
+                    <h2>Bruiloft tarieven<br>op maat</h2>
+                    <p>Meer informatie</p>
+                </div>
+            </a>
+            <% if(package!=='4 uur' ) { %>
+                <a href="/tarieven/4-uur">
+                    <img class="right" src="/assets/portrait-6.jpeg" alt="Portret foto">
+                    <div>
+                        <h2>Tot 4 uur<br>fotografie</h2>
+                        <p>Meer informatie</p>
+                    </div>
+                </a>
+                <% } if(package!=='2 uur' ) { %>
+                    <a href="/tarieven/2-uur">
+                        <img src="/assets/portrait-7.jpeg" alt="Portret foto">
+                        <div>
+                            <h2>Tot 2 uur<br>fotografie</h2>
+                            <p>Meer informatie</p>
+                        </div>
+                    </a>
+                    <% } if(package!=='1 uur' ) { %>
+                        <a href="/tarieven/1-uur">
+                            <img class="left" src="/assets/portrait-8.jpeg" alt="Portret foto">
+                            <div>
+                                <h2>Tot 1 uur<br>fotografie</h2>
+                                <p>Meer informatie</p>
+                            </div>
+                        </a>
+                        <% } %>
+        </section>
+    </main>
+
+    <%- include('layout/contact'); %>
+</body>
+
+</html>
