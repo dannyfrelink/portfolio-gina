@@ -46,6 +46,10 @@ h2 {
     font-weight: 500;
 }
 
+h3 {
+    display: none;
+}
+
 p {
     font-size: var(--small-text-size);
 }
@@ -384,6 +388,17 @@ header #portfolio_header #image_blur {
 main #working_method div {
     display: flex;
     justify-content: space-evenly;
+}
+
+main #portfolio {
+    display: grid;
+    gap: 1rem;
+    background-color: var(--secondary-color);
+    padding: 3rem 7.5vw;
+}
+
+main #portfolio img {
+    width: 100%;
 }
 
 /* Contact form styling */

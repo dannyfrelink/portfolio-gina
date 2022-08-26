@@ -52,7 +52,10 @@
         </section>
 
         <section id="portfolio">
-
+            <h3>Portfolio</h3>
+            <% shuffledPortfolioImages.forEach(function(image) { %>
+                <img src="<%= image %>" alt="Portfolio image">
+                <% }) %>
         </section>
     </main>
 
