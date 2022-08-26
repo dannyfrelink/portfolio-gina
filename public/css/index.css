@@ -31,7 +31,7 @@ body {
 }
 
 main.transform_main {
-    transform: translateY(-2.375rem);
+    transform: translateY(clamp(-3.6rem, -8.92vw, -2.375rem));
 }
 
 a {
@@ -165,7 +165,7 @@ header #carousel>div:first-of-type {
     position: absolute;
     width: 85vw;
     left: 7.5vw;
-    top: 4rem;
+    top: clamp(4rem, 15.023vw, 9.188rem);
 }
 
 header #carousel div h1 {
@@ -174,17 +174,18 @@ header #carousel div h1 {
 
 header #carousel div p {
     font-weight: bold;
-    margin-top: 0.625rem;
+    margin-top: clamp(0.625rem, 2.347vw, 1.156rem);
 }
 
 header #carousel div div {
     display: flex;
     justify-content: space-between;
-    margin-top: 11.25rem;
+    margin: auto;
+    margin-top: clamp(11.25rem, 45vw, calc(92vh - 9.188rem - 35vh));
 }
 
 header #carousel div div button {
-    font-size: 3rem;
+    font-size: clamp(3rem, 11.268vw, 5.5rem);
     color: var(--primary-color);
     background-color: unset;
     border: unset;
@@ -200,13 +201,15 @@ header #carousel div div #next::before {
 }
 
 header #carousel div:nth-of-type(2) {
+    max-height: 92vh;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
 }
 
 header #carousel div img {
-    height: 27.375rem;
-    width: 100vw;
+    height: clamp(27.375rem, 102.817vw, 83rem);
+    width: 100vw !important;
     object-fit: cover;
     object-position: center;
 }
@@ -250,10 +253,11 @@ main .links>div {
     max-width: 103.75rem;
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    /* grid-auto-flow: column; */
     justify-content: space-between;
     margin: auto;
-    padding: clamp(1.5rem, 4.695vw, 5rem) 0;
+    padding: clamp(1.5rem, 5.634vw, 5rem) 0;
 }
 
 main .links a {
@@ -281,11 +285,11 @@ main .links a img.right,
 
 main .links a div {
     background-color: var(--overlay-color);
-    padding: 1.25rem;
+    padding: clamp(1.25rem, 4.695vw, 2rem);
 }
 
 main .links a div h2 {
-    font-size: clamp(1.125rem, 4.225vw, 1.563rem);
+    font-size: clamp(1.125rem, 4.225vw, 1.65rem);
 }
 
 main .links a div p {
@@ -446,13 +450,13 @@ footer {
 footer.tranform_footer {
     position: absolute;
     left: 7.5vw;
-    transform: translateY(-2.375rem);
+    transform: translateY(clamp(-3.6rem, -8.92vw, -2.375rem));
     padding: 0;
 }
 
 footer #footer_line {
-    height: 2rem;
-    width: 2px;
+    height: clamp(2rem, 7.512vw, 4.125rem);
+    width: clamp(2px, 0.469vw, 3px);
     background-color: black;
     margin: auto;
 }
@@ -466,12 +470,12 @@ footer h2 {
 footer form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5rem;
+    margin-bottom: clamp(1.5rem, 5.634vw, 3.125rem);
 }
 
 footer form * {
     font-size: var(--small-text-size);
-    margin-top: 2rem;
+    margin-top: clamp(2rem, 7.512vw, 3.125rem);
 }
 
 footer form input[type="text"],
@@ -479,7 +483,7 @@ textarea {
     font-family: inherit;
     border: unset;
     outline: unset;
-    border-bottom: 1.5px solid rgba(0, 0, 0, .5);
+    border-bottom: clamp(1.5px, 0.352vw, 2.5px) solid rgba(0, 0, 0, .5);
 }
 
 footer form input[type="submit"],
@@ -487,17 +491,17 @@ main .about_section a,
 main #working_method div a {
     width: fit-content;
     background-color: unset;
-    border: 1.5px solid black;
-    border-radius: 0.5rem;
-    padding: 0.25rem 0.6rem;
+    border: clamp(1.5px, 0.352vw, 2.5px) solid black;
+    border-radius: clamp(0.5rem, 1.878vw, 0.9rem);
+    padding: clamp(0.25rem, 0.939vw, 0.45rem) clamp(0.6rem, 2.254vw, 1.08rem);
 }
 
 footer form input[type="submit"] {
-    margin-top: 1.5rem;
+    margin-top: clamp(1.5rem, 5.634vw, 3.125rem);
 }
 
 footer section p {
-    margin-bottom: 0.5rem;
+    margin-bottom: clamp(0.5rem, 1.878vw, 0.9rem);
 }
 
 footer section div {
@@ -505,29 +509,40 @@ footer section div {
 }
 
 footer section div a img {
-    width: 1.4rem;
-    margin-right: 0.9rem;
+    width: clamp(1.4rem, 5.258vw, 2.5rem);
+    margin-right: clamp(0.9rem, 3.38vw, 1.62rem);
 }
 
 footer>p {
     text-align: center;
-    margin: 0.5rem 0 1rem;
+    margin: clamp(0.5rem, 1.878vw, 0.9rem) 0 clamp(1rem, 3, 756vw, 1.8rem);
 }
 
 
 
 
 
-/* @media(min-width: 426px) {
+@media(min-width: 1000px) {
 
-
-    main #review,
-    main #working_method {
-        padding: 0.625rem;
+    footer form input[type="text"],
+    textarea {
+        width: 40vw;
+        max-width: 34.75rem;
     }
 
-    main #review p,
-    main #working_method p {
-        margin-top: 0.625rem;
+    footer>div {
+        display: flex;
+        justify-content: space-between;
+        width: 85vw;
+        max-width: 66rem;
+        margin: 2.5rem auto 0;
     }
-} */
+
+    footer form input[type="text"]:first-of-type {
+        margin: 0;
+    }
+
+    footer>div section {
+        width: fit-content;
+    }
+}
