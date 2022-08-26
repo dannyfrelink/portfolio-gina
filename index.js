@@ -9,10 +9,30 @@ const PORT = process.env.PORT || 5151;
 // const io = new Server(server);
 const fetch = require('node-fetch');
 
-fetch('http://localhost:5151/test.json')
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
+const fetchPortfolioImages = () => {
+    return fetch('http://localhost:5151/portfolio-images.json')
+        .then(res => res.json())
+        .then(data => Object.values(data))
+        .catch(err => console.log(err));
+}
+
+function shuffleArray(array) {
+    let currentIndex = array.length, randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
@@ -25,8 +45,11 @@ app.get('/overmij', (req, res) => {
     res.render('about');
 });
 
-app.get('/portfolio', (req, res) => {
-    res.render('portfolio');
+app.get('/portfolio', async (req, res) => {
+    const portfolioImages = await fetchPortfolioImages();
+    const shuffledPortfolioImages = await shuffleArray(portfolioImages);
+    console.log(shuffledPortfolioImages)
+    res.render('portfolio', { shuffledPortfolioImages });
 });
 
 app.use((req, res) => {
