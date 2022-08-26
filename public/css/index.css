@@ -244,19 +244,23 @@ main .links {
     margin-top: 1.375rem;
 }
 
-main .links a {
-    width: 73.33vw;
+main .links>div {
+    width: 85vw;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    justify-content: space-between;
     margin: auto;
-    padding-top: 2.5rem;
+    padding: 1.5rem 0;
 }
 
-main .links a:last-of-type {
-    padding-bottom: 2.5rem;
+main .links a {
+    margin: auto;
 }
 
 main .links a img {
     display: block;
-    width: 73.33vw;
+    width: 17.187rem;
     height: 21.125rem;
     object-fit: cover;
     object-position: bottom;
@@ -326,7 +330,7 @@ main .links a div p {
     bottom: -35vw;
     left: 0;
     right: 0;
-    background-image: linear-gradient(35deg, transparent 0% 28.2%, var(--secondary-color) 28.2% 100%);
+    background-color: var(--secondary-color);
     transform: skewY(-35deg);
     height: 100vh;
     width: 100vw;
@@ -421,20 +425,16 @@ main #portfolio img {
     margin-top: 1.5rem;
 }
 
-#prices_body .links a:first-of-type {
-    padding-top: 1rem;
-}
-
 #prices_body main::before {
     height: 125vh;
-    background-image: linear-gradient(35deg, transparent 0% 23.95%, var(--secondary-color) 23.95% 100%);
 }
 
 /* Contact form styling */
 footer {
     text-align: left;
     width: 85vw;
-    margin: auto;
+    padding: 0 7.5vw;
+    background-color: var(--primary-color);
 }
 
 footer.tranform_footer {
