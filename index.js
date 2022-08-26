@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5151;
 const fetch = require('node-fetch');
 
 const fetchPortfolioImages = () => {
-    return fetch('http://localhost:5151/portfolio-images.json')
+    return fetch('http://localhost:5151/json/portfolio-images.json')
         .then(res => res.json())
         .then(data => Object.values(data))
         .catch(err => console.log(err));
