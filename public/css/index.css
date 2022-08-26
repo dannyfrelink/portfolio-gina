@@ -239,22 +239,22 @@ main #working_method p {
     margin-top: 0.625rem;
 }
 
-main #links {
+main .links {
     background-color: var(--secondary-color);
     margin-top: 1.375rem;
 }
 
-main #links a {
+main .links a {
     width: 73.33vw;
     margin: auto;
     padding-top: 2.5rem;
 }
 
-main #links a:last-of-type {
+main .links a:last-of-type {
     padding-bottom: 2.5rem;
 }
 
-main #links a img {
+main .links a img {
     display: block;
     width: 73.33vw;
     height: 21.125rem;
@@ -263,12 +263,20 @@ main #links a img {
     border-radius: 50% 50% 0 0 / 40% 40% 0 0;
 }
 
-main #links a div {
+main .links a img.left {
+    object-position: 30% 100%;
+}
+
+main .links a img.right {
+    object-position: 70% 100%;
+}
+
+main .links a div {
     background-color: var(--overlay-color);
     padding: 1.25rem;
 }
 
-main #links a div p {
+main .links a div p {
     width: fit-content;
     font-size: var(--small-text-size);
     border-bottom: 1.5px solid black;
@@ -277,7 +285,8 @@ main #links a div p {
 }
 
 /* About me page styling */
-#about_body header::before {
+#about_body header::before,
+#prices_body header::before {
     content: '';
     position: absolute;
     top: -35vw;
@@ -303,11 +312,13 @@ main #links a div p {
     padding-bottom: 3rem;
 }
 
-#about_body main {
+#about_body main,
+#prices_body main {
     position: relative;
 }
 
-#about_body main::before {
+#about_body main::before,
+#prices_body main::before {
     content: '';
     position: absolute;
     bottom: -35vw;
@@ -394,11 +405,27 @@ main #portfolio {
     display: grid;
     gap: 1rem;
     background-color: var(--secondary-color);
+    margin-top: 1.375rem;
     padding: 3rem 7.5vw;
 }
 
 main #portfolio img {
     width: 100%;
+}
+
+/* Prices page styling */
+#prices_body .links {
+    background-color: unset;
+    margin-top: 1.5rem;
+}
+
+#prices_body .links a:first-of-type {
+    padding-top: 1rem;
+}
+
+#prices_body main::before {
+    height: 125vh;
+    background-image: linear-gradient(35deg, transparent 0% 23.95%, var(--secondary-color) 23.95% 100%);
 }
 
 /* Contact form styling */

@@ -53,6 +53,10 @@ app.get('/portfolio', async (req, res) => {
     res.render('portfolio', { shuffledPortfolioImages });
 });
 
+app.get('/tarieven', (req, res) => {
+    res.render('prices');
+});
+
 app.use((req, res) => {
     res.status(404).send('Sorry, could not find the page you were looking for.');
 });
