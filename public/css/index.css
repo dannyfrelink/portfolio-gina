@@ -4,8 +4,11 @@
     --overlay-color: #E6CDB9;
 
     --big-text-size: clamp(1.563rem, 5.87vw, 3.125rem);
-    --medium-text-size: clamp(1.125rem, 4.225vw, 2.063rem);
-    --small-text-size: clamp(0.875rem, 3.286vw, 1.563rem);
+    --medium-text-size: clamp(1.125rem, 4.225vw, 1.65rem);
+    --small-text-size: clamp(0.875rem, 3.286vw, 1.3rem);
+
+    /* --medium-text-size: clamp(1.125rem, 4.225vw, 2.063rem);
+    --small-text-size: clamp(0.875rem, 3.286vw, 1.563rem); */
 }
 
 *,
@@ -27,11 +30,11 @@ html {
 body {
     font-family: 'Avenir', Helvetica, sans-serif;
     text-align: center;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 main.transform_main {
-    transform: translateY(clamp(-3.6rem, -8.92vw, -2.375rem));
+    transform: translateY(clamp(-2.5rem, -8.92vw, -2.375rem));
 }
 
 a {
@@ -236,7 +239,7 @@ main #review,
 main #working_method {
     background-color: var(--primary-color);
     width: calc(85vw - (0.625rem*2));
-    max-width: 50.25rem;
+    max-width: 40.25rem;
     margin: auto;
     padding: clamp(0.625rem, 2.347vw, 1.156rem);
 }
@@ -248,7 +251,7 @@ main #working_method h2 {
 
 main #review p,
 main #working_method p {
-    max-width: 38.5rem;
+    max-width: 30rem;
     margin: auto;
     margin-top: clamp(0.625rem, 2.347vw, 1.156rem);
 }
@@ -298,12 +301,14 @@ main .links a div {
 }
 
 main .links a div h2 {
-    font-size: clamp(1.125rem, 4.225vw, 1.65rem);
+    font-size: var(--medium-text-size);
+    /* font-size: clamp(1.125rem, 4.225vw, 1.65rem); */
 }
 
 main .links a div p {
     width: fit-content;
-    font-size: clamp(0.875rem, 3.286vw, 1.15rem);
+    font-size: var(--small-text-size);
+    /* font-size: clamp(0.875rem, 3.286vw, 1.15rem); */
     border-bottom: 1.5px solid black;
     margin: 0.625rem auto 0;
     padding-bottom: 0.3rem;
@@ -326,15 +331,16 @@ main .links a div p {
 .about_section {
     text-align: left;
     width: 85vw;
+    max-width: 70rem;
     margin: auto;
 }
 
 .about_section:first-of-type {
-    margin-top: 4rem;
+    margin-top: clamp(4rem, 15.023vw, 9.188rem);
 }
 
 .about_section:last-of-type {
-    padding-bottom: 3rem;
+    padding-bottom: clamp(3rem, 11.267vw, 6.891rem);
 }
 
 #about_body main,
@@ -354,18 +360,24 @@ main .links a div p {
     height: 100vh;
     width: 100vw;
     z-index: -1;
+    /* overflow-y: hidden; */
 }
 
 .about_section img {
-    width: 19.922rem;
-    height: 25.563rem;
+    width: 85vw;
+    max-width: 29.637rem;
+    height: 109.069vw;
+    max-height: 38rem;
     object-fit: cover;
     object-position: center;
 }
 
 .about_section article {
+    width: calc(85vw - (clamp(1.25rem, 4.695vw, 2.5rem)*2));
+    max-width: calc(40.509rem - (clamp(1.25rem, 4.695vw, 2.5rem)*2));
+    height: fit-content;
     background-color: var(--overlay-color);
-    padding: 1.375rem 1.25rem;
+    padding: clamp(1.375rem, 5.165vw, 2.75rem) clamp(1.25rem, 4.695vw, 2.5rem);
 }
 
 .about_section article:first-child,
@@ -375,13 +387,20 @@ main .links a div p {
 }
 
 .about_section article p {
-    margin-top: 0.5rem;
+    margin-top: clamp(0.5rem, 1.878vw, 0.9rem);
 }
 
 .about_section article a,
 main #working_method div a {
     font-size: var(--small-text-size);
     margin-top: 1rem;
+}
+
+.about_section article a:hover,
+.about_section article a:focus,
+main #working_method div a:hover,
+main #working_method div a:focus {
+    background-color: var(--secondary-color);
 }
 
 #banner_photo {
@@ -401,7 +420,8 @@ header #portfolio_header {
 
 header #portfolio_header h1 {
     position: absolute;
-    top: 4rem;
+    top: clamp(4rem, 15.023vw, 9.188rem);
+    ;
     left: 7.5vw;
     width: 85vw;
 }
@@ -417,7 +437,7 @@ header #portfolio_header #image_blur {
     position: absolute;
     bottom: -2.25rem;
     width: 100vw;
-    height: 4rem;
+    height: clamp(4rem, 15.023vw, 9.188rem);
     background-image: linear-gradient(0deg, var(--primary-color) 45%, transparent 100%);
 }
 
@@ -456,11 +476,15 @@ footer {
     background-color: var(--primary-color);
 }
 
-footer.tranform_footer {
+footer.transform_footer {
     position: absolute;
     left: 7.5vw;
-    transform: translateY(clamp(-3.6rem, -8.92vw, -2.375rem));
+    transform: translateY(clamp(-2.5rem, -8.92vw, -2.375rem));
     padding: 0;
+}
+
+footer.transform_footer_large {
+    margin-top: 5rem;
 }
 
 footer #footer_line {
@@ -530,12 +554,12 @@ footer section div a {
 }
 
 footer section div a img {
-    width: clamp(1.4rem, 5.258vw, 2.5rem);
+    width: clamp(1.4rem, 5.258vw, 2rem);
 }
 
 footer>p {
     text-align: center;
-    margin: clamp(0.5rem, 1.878vw, 0.9rem) 0 clamp(1rem, 3.756vw, 1.8rem);
+    padding: clamp(0.5rem, 1.878vw, 0.9rem) 0 clamp(1rem, 3.756vw, 1.8rem);
 }
 
 
@@ -544,10 +568,31 @@ footer>p {
 
 @media(min-width: 1000px) {
 
+    .about_section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about_section:first-of-type {
+        align-items: flex-end;
+    }
+
+    .about_section:first-of-type~* {
+        transform: translateY(5rem);
+    }
+
+    .about_section>*:last-child {
+        transform: translateY(5rem);
+    }
+
+    .about_section img {
+        width: clamp(30%, 25.5vw, 29.637rem);
+    }
+
     footer form input[type="text"],
     textarea {
-        width: 40vw;
-        max-width: 34.75rem;
+        width: 42.5vw;
+        max-width: 37.75rem;
     }
 
     footer>div {
