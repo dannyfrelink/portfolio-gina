@@ -12,7 +12,6 @@
             <section id="portfolio_header">
                 <h1>Jullie bruiloft helemaal <br> naar wens vastgelegd!</h1>
                 <img src="/assets/landscape-7.jpeg" alt="Wedding rings">
-                <div id="image_blur"></div>
             </section>
     </header>
 
@@ -53,9 +52,11 @@
 
         <section id="portfolio">
             <h3>Portfolio</h3>
-            <% shuffledPortfolioImages.forEach(function(image) { %>
-                <img src="<%= image %>" alt="Portfolio image">
-                <% }) %>
+            <div>
+                <% portfolioImages.forEach(function(image) { %>
+                    <img src="<%= image %>" alt="Portfolio image">
+                    <% }) %>
+            </div>
         </section>
     </main>
 

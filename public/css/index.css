@@ -59,7 +59,14 @@ h2 {
 }
 
 h3 {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10rem;
+    color: var(--primary-color);
+    transform: rotate(-90deg) translateY(-100%);
+    transform-origin: 50% 100%;
+    /* display: none; */
 }
 
 p {
@@ -251,7 +258,7 @@ main #working_method h2 {
 
 main #review p,
 main #working_method p {
-    max-width: 30rem;
+    max-width: 35.1rem;
     margin: auto;
     margin-top: clamp(0.625rem, 2.347vw, 1.156rem);
 }
@@ -319,16 +326,19 @@ main .links a div p {
 #prices_body header::before {
     content: '';
     position: absolute;
-    top: -35vw;
+    top: clamp(-35rem, -35vw, -9.203rem);
     left: 0;
     right: 0;
     background-color: var(--secondary-color);
     transform: skewY(-35deg);
-    height: 100vh;
+    height: clamp(41.688rem, 156.573vw, 60rem);
     z-index: -1;
 }
 
 .about_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: left;
     width: 85vw;
     max-width: 70rem;
@@ -352,15 +362,14 @@ main .links a div p {
 #prices_body main::before {
     content: '';
     position: absolute;
-    bottom: -35vw;
+    bottom: clamp(-35rem, -35vw, -9.203rem);
     left: 0;
     right: 0;
     background-color: var(--secondary-color);
     transform: skewY(-35deg);
-    height: 100vh;
+    height: clamp(41.688rem, 156.573vw, 60rem);
     width: 100vw;
     z-index: -1;
-    /* overflow-y: hidden; */
 }
 
 .about_section img {
@@ -393,7 +402,7 @@ main .links a div p {
 .about_section article a,
 main #working_method div a {
     font-size: var(--small-text-size);
-    margin-top: 1rem;
+    margin-top: clamp(1rem, 3.756vw, 1.8rem);
 }
 
 .about_section article a:hover,
@@ -405,40 +414,35 @@ main #working_method div a:focus {
 
 #banner_photo {
     width: 85vw;
-    height: 11.25rem;
+    height: clamp(11.25rem, 42.254vw, 22.5rem);
     object-fit: cover;
     object-position: 50% 35%;
-    margin: 1.75rem;
+    margin: clamp(1.75rem, 6.573vw, 3.15rem) 0;
 }
 
 /* Portfolio page styling */
 header #portfolio_header {
     display: flex;
+    align-items: center;
+    max-height: 50rem;
     position: relative;
     z-index: -1;
+    overflow: hidden;
 }
 
 header #portfolio_header h1 {
     position: absolute;
+    font-size: var(--big-text-size);
     top: clamp(4rem, 15.023vw, 9.188rem);
-    ;
     left: 7.5vw;
     width: 85vw;
 }
 
 header #portfolio_header img {
-    height: 27.375rem;
+    height: clamp(27.375rem, 102.817vw, 80rem);
     width: 100vw;
     object-fit: cover;
     object-position: center;
-}
-
-header #portfolio_header #image_blur {
-    position: absolute;
-    bottom: -2.25rem;
-    width: 100vw;
-    height: clamp(4rem, 15.023vw, 9.188rem);
-    background-image: linear-gradient(0deg, var(--primary-color) 45%, transparent 100%);
 }
 
 main #working_method div {
@@ -447,15 +451,27 @@ main #working_method div {
 }
 
 main #portfolio {
-    display: grid;
-    gap: 1rem;
+    position: relative;
     background-color: var(--secondary-color);
-    margin-top: 1.375rem;
-    padding: 3rem 7.5vw;
+    margin-top: clamp(1.375rem, 5.164vw, 2.475rem);
+    padding: clamp(3rem, 11.268vw, 5.4rem) 7.5vw;
+}
+
+main #portfolio div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: clamp(1rem, 3.756vw, 2.5rem);
+    max-width: 66rem;
+    margin: auto;
 }
 
 main #portfolio img {
-    width: 100%;
+    width: 20rem;
+    margin: auto;
+}
+
+main #portfolio img:nth-of-type(3n) {
+    grid-row-end: span 2;
 }
 
 /* Prices page styling */
@@ -465,7 +481,7 @@ main #portfolio img {
 }
 
 #prices_body main::before {
-    height: 125vh;
+    height: clamp(52.109rem, 196vw, 75rem);
 }
 
 /* Contact form styling */
@@ -568,8 +584,26 @@ footer>p {
 
 @media(min-width: 1000px) {
 
+    #about_body header::before,
+    #about_body main::before,
+    #prices_body header::before,
+    #prices_body main::before {
+        transform: skewY(-10deg);
+        height: 75vh;
+    }
+
+    #about_body header::before,
+    #prices_body header::before {
+        top: -16.8vw;
+    }
+
+    #about_body main::before,
+    #prices_body main::before {
+        bottom: -16.8vw;
+    }
+
     .about_section {
-        display: flex;
+        flex-direction: row;
         justify-content: center;
     }
 
