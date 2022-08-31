@@ -173,11 +173,11 @@ header nav #socials {
 }
 
 header nav #socials img {
-    width: 1.4rem;
+    width: clamp(1.4rem, 5.258vw, 1.7rem);
 }
 
 header nav #socials a+a {
-    margin-left: 0.9rem;
+    margin-left: clamp(0.9rem, 3.38vw, 1.71rem);
 }
 
 /* Home page styling */
@@ -589,6 +589,53 @@ footer>p {
 @media(min-width: 1000px) {
     h3 {
         display: block;
+    }
+
+    #hamburger_menu,
+    header nav::before,
+    header nav h2 {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-evenly;
+        width: 85vw;
+        background-color: unset;
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+        box-shadow: unset;
+        margin: 0 7.5vw;
+        padding: 1.5rem 0;
+    }
+
+    header nav a,
+    header nav #socials {
+        margin: 0;
+    }
+
+    header nav div:first-of-type {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        height: 100%;
+        margin: 0;
+    }
+
+    header nav div:first-of-type a+a {
+        margin-left: 3.125vw;
+    }
+
+    header nav #socials {
+        align-items: center;
+    }
+
+    header nav #socials a {
+        height: 1.6rem;
+    }
+
+    header nav #socials a+a {
+        margin-left: clamp(0.9rem, 1.44vw, 1.4rem);
     }
 
     #about_body header::before,
