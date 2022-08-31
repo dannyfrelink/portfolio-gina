@@ -610,6 +610,24 @@ footer>p {
         border-bottom: 2px solid black;
     }
 
+    header nav.scrolled_navigation::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -7.5vw;
+        right: 0;
+        height: 100%;
+        width: 100vw;
+        background-color: var(--secondary-color);
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+        z-index: -1;
+    }
+
+    header nav.scrolled_navigation {
+        border-bottom: unset;
+    }
+
     header nav a,
     header nav #socials {
         margin: 0;

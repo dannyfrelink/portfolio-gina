@@ -3,6 +3,27 @@ const navigation = document.querySelector('header nav');
 const navigationSocialsImg = document.querySelectorAll('header nav #socials a img');
 const portfolioImages = document.querySelectorAll('#portfolio div img');
 const footer = document.querySelector('footer');
+let userHasScrolled = false;
+window.addEventListener('scroll', () => {
+    if (screen.width >= 1000 && window.scrollY >= 60) {
+        navigation.classList.add('scrolled_navigation');
+        if (location.pathname === '/' || location.pathname === '/portfolio') {
+            navigation.classList.add('black_navigation');
+            navigationSocialsImg.forEach(social => {
+                social.src = social.src.split('-black').join('');
+                social.src = social.src.split('4').join('4-black');
+            });
+        }
+    } else {
+        navigation.classList.remove('scrolled_navigation');
+        if (location.pathname === '/' || location.pathname === '/portfolio') {
+            navigation.classList.remove('black_navigation');
+            navigationSocialsImg.forEach(social => {
+                social.src = social.src.split('-black').join('');
+            });
+        }
+    }
+});
 
 hamburgerMenu.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('open');
