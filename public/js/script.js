@@ -1,4 +1,5 @@
 const hamburgerMenu = document.querySelector('#hamburger_menu');
+const navigation = document.querySelector('header nav');
 const portfolioImages = document.querySelectorAll('#portfolio div img');
 const footer = document.querySelector('footer');
 
@@ -12,6 +13,10 @@ if (location.pathname === '/' || location.pathname === '/portfolio') {
     footer.classList.add('transform_footer_large');
 } else if (screen.width < 1000) {
     footer.classList.remove('transform_footer_large');
+}
+
+if (location.pathname === '/overmij' || location.pathname === '/tarieven') {
+    navigation.classList.add('black_navigation');
 }
 
 window.addEventListener('resize', () => {

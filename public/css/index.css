@@ -609,6 +609,11 @@ footer>p {
         padding: 1.5rem 0;
     }
 
+    header nav.black_navigation {
+        color: black;
+        border-bottom: 2px solid black;
+    }
+
     header nav a,
     header nav #socials {
         margin: 0;
