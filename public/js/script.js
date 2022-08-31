@@ -34,7 +34,3 @@ portfolioImages.forEach(image => {
         image.classList.add('portrait');
     }
 });
-
-// if (location.pathname === '/overmij') {
-//     hamburgerMenu
-// }
