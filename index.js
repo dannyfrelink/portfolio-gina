@@ -48,9 +48,9 @@ app.get('/portfolio', async (req, res) => {
     const url = `${protocol}://${host}`;
 
     const portfolioImages = await fetchPortfolioImages(url);
-    // const shuffledPortfolioImages = await shuffleArray(portfolioImages);
+    const shuffledPortfolioImages = await shuffleArray(portfolioImages);
 
-    res.render('portfolio', { portfolioImages });
+    res.render('portfolio', { shuffledPortfolioImages });
 });
 
 app.get('/tarieven', (req, res) => {

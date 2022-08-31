@@ -1,4 +1,5 @@
 const hamburgerMenu = document.querySelector('#hamburger_menu');
+const portfolioImages = document.querySelectorAll('#portfolio div img');
 const footer = document.querySelector('footer');
 
 hamburgerMenu.addEventListener('click', () => {
@@ -21,7 +22,13 @@ window.addEventListener('resize', () => {
             footer.classList.remove('transform_footer_large');
         }
     }
-})
+});
+
+portfolioImages.forEach(image => {
+    if (image.src.includes('portrait')) {
+        image.classList.add('portrait');
+    }
+});
 
 // if (location.pathname === '/overmij') {
 //     hamburgerMenu
