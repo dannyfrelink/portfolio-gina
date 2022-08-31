@@ -46,10 +46,10 @@ a {
 
 a:hover,
 a:focus,
-button:hover,
-button:focus {
+header #carousel div div button:hover,
+header #carousel div div button:focus {
     opacity: 1;
-    transform: scale(1.15);
+    transform: scale(1.1);
     transition: 0.2s transform;
 }
 
@@ -266,7 +266,7 @@ main #working_method p {
 
 main .links {
     background-color: var(--secondary-color);
-    margin-top: 1.375rem;
+    margin-top: clamp(1.375rem, 5.164vw, 2.475rem);
 }
 
 main .links>div {
@@ -477,7 +477,11 @@ main #portfolio img.portrait {
 /* Prices page styling */
 #prices_body .links {
     background-color: unset;
-    margin-top: 1.5rem;
+    margin-top: clamp(1.5rem, 5.633vw, 2.7rem);
+}
+
+#prices_body .links>div {
+    padding-top: clamp(1.5rem, 5.634vw, 2.7rem);
 }
 
 #prices_body main::before {
@@ -600,9 +604,13 @@ footer>p {
         top: -16.8vw;
     }
 
-    #about_body main::before,
-    #prices_body main::before {
+    #about_body main::before {
         bottom: -16.8vw;
+    }
+
+    #prices_body main::before {
+        bottom: -24.8vw;
+
     }
 
     .about_section {
@@ -614,16 +622,22 @@ footer>p {
         align-items: flex-end;
     }
 
-    .about_section:first-of-type~* {
-        transform: translateY(5rem);
-    }
-
+    .about_section:first-of-type~*,
     .about_section>*:last-child {
         transform: translateY(5rem);
     }
 
     .about_section img {
         width: clamp(30%, 25.5vw, 29.637rem);
+    }
+
+    #prices_body .about_section:first-of-type~*,
+    #prices_body .about_section>*:last-child {
+        transform: translateY(10rem);
+    }
+
+    #prices_body .transform_footer_large {
+        margin-top: 10rem;
     }
 
     footer form input[type="text"],
