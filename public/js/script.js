@@ -1,5 +1,6 @@
 const hamburgerMenu = document.querySelector('#hamburger_menu');
 const navigation = document.querySelector('header nav');
+const navigationSocialsImg = document.querySelectorAll('header nav #socials a img');
 const portfolioImages = document.querySelectorAll('#portfolio div img');
 const footer = document.querySelector('footer');
 
@@ -17,6 +18,9 @@ if (location.pathname === '/' || location.pathname === '/portfolio') {
 
 if (location.pathname === '/overmij' || location.pathname === '/tarieven') {
     navigation.classList.add('black_navigation');
+    navigationSocialsImg.forEach(social => {
+        social.src = social.src.split('4').join('4-black');
+    });
 }
 
 window.addEventListener('resize', () => {

@@ -311,9 +311,9 @@ main .links a div h2 {
 main .links a div p {
     width: fit-content;
     font-size: var(--small-text-size);
-    border-bottom: 1.5px solid black;
-    margin: 0.625rem auto 0;
-    padding-bottom: 0.3rem;
+    border-bottom: clamp(1.5px, 0.352vw, 2px) solid black;
+    margin: clamp(0.625rem, 2.347vw, 1.125rem) auto 0;
+    padding-bottom: clamp(0.3rem, 1.127vw, 0.54rem);
 }
 
 /* About me page styling */
