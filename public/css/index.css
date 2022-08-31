@@ -80,9 +80,9 @@ header {
 
 header #hamburger_menu {
     position: fixed;
-    top: 1.25rem;
+    top: clamp(1.25rem, 4.695vw, 2.25rem);
     right: 7.5vw;
-    height: 1.5rem;
+    height: clamp(1.5rem, 5.634vw, 2.7rem);
     width: fit-content;
     z-index: 2;
 }
@@ -93,7 +93,7 @@ header #hamburger_menu.open div {
 
 header #hamburger_menu.open div:nth-of-type(1),
 header #hamburger_menu.open div:nth-of-type(3) {
-    width: 1.2rem;
+    width: clamp(1.2rem, 4.507vw, 2.16rem);
     transform-origin: right center;
     transition: 0.2s transform;
 }
@@ -116,10 +116,10 @@ header #hamburger_menu.open~nav {
 
 header #hamburger_menu div {
     background-color: var(--primary-color);
-    height: 2px;
-    width: 1.375rem;
+    height: clamp(0.125rem, 0.469vw, 0.225rem);
+    width: clamp(1.375rem, 5.164vw, 2.475rem);
     border-radius: 1.25px;
-    margin: 0.3rem;
+    margin: clamp(0.3rem, 1.127vw, 0.54rem);
 }
 
 header nav {
@@ -157,19 +157,19 @@ header nav h2 {
 }
 
 header nav div:first-of-type {
-    margin-top: 1rem;
+    margin-top: clamp(1rem, 3.756vw, 1.8rem);
 }
 
 header nav a {
     font-size: var(--medium-text-size);
     font-weight: 500;
-    margin-top: 0.5rem;
+    margin-top: clamp(0.5rem, 1.878vw, 0.9rem);
 }
 
 header nav #socials {
     display: flex;
     width: fit-content;
-    margin-top: 0.5rem;
+    margin-top: clamp(0.5rem, 1.878vw, 0.9rem);
 }
 
 header nav #socials img {
@@ -606,7 +606,7 @@ footer>p {
         border-bottom: 2px solid var(--primary-color);
         box-shadow: unset;
         margin: 0 7.5vw;
-        padding: 1.5rem 0;
+        padding: 1.75rem 0;
     }
 
     header nav.black_navigation {
@@ -656,13 +656,9 @@ footer>p {
         top: -16.8vw;
     }
 
-    #about_body main::before {
-        bottom: -16.8vw;
-    }
-
+    #about_body main::before,
     #prices_body main::before {
-        bottom: -24.8vw;
-
+        bottom: -16.8vw;
     }
 
     .about_section {
@@ -683,13 +679,8 @@ footer>p {
         width: clamp(30%, 25.5vw, 29.637rem);
     }
 
-    #prices_body .about_section:first-of-type~*,
-    #prices_body .about_section>*:last-child {
-        transform: translateY(10rem);
-    }
-
-    #prices_body .transform_footer_large {
-        margin-top: 10rem;
+    #prices_body .about_section:first-of-type {
+        align-items: flex-start;
     }
 
     footer form input[type="text"],
