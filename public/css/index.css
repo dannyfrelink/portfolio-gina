@@ -87,10 +87,6 @@ header #hamburger_menu {
     z-index: 2;
 }
 
-header #hamburger_menu.open div {
-    background-color: black;
-}
-
 header #hamburger_menu.open div:nth-of-type(1),
 header #hamburger_menu.open div:nth-of-type(3) {
     width: clamp(1.2rem, 4.507vw, 2.16rem);
@@ -115,7 +111,7 @@ header #hamburger_menu.open~nav {
 }
 
 header #hamburger_menu div {
-    background-color: var(--primary-color);
+    background-color: black;
     height: clamp(0.125rem, 0.469vw, 0.225rem);
     width: clamp(1.375rem, 5.164vw, 2.475rem);
     border-radius: 1.25px;
