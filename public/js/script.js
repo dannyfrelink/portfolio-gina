@@ -94,13 +94,14 @@ if (screen.width >= 1000) {
 
 window.addEventListener('resize', () => {
     if (screen.width >= 1000) {
-        navigationSocialsImg.forEach(social => {
-            social.src = social.src.split('-black').join('');
-        });
         if (location.pathname === '/overmij') {
             footer.classList.add('transform_footer_larger');
         } else if (location.pathname.includes('/tarieven')) {
             footer.classList.add('transform_footer_large');
+        } else {
+            navigationSocialsImg.forEach(social => {
+                social.src = social.src.split('-black').join('');
+            });
         }
     } else {
         navigationSocialsImg.forEach(social => {
