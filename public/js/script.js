@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
             navigation.classList.add('black_navigation');
             navigationSocialsImg.forEach(social => {
                 social.src = social.src.split('-black').join('');
-                social.src = social.src.split('4').join('4-black');
+                social.src = social.src.split('-64').join('-64-black');
             });
         }
     } else {
@@ -37,7 +37,7 @@ window.addEventListener('scroll', () => {
 if (location.pathname === '/overmij' || location.pathname === '/tarieven') {
     navigation.classList.add('black_navigation');
     navigationSocialsImg.forEach(social => {
-        social.src = social.src.split('4').join('4-black');
+        social.src = social.src.split('-64').join('-64-black');
     });
 }
 
@@ -58,12 +58,13 @@ const moveCarousel = (e) => {
         }
     }
     carouselImages[carouselCounter].classList.add('show');
-    // carouselImages.style.transform = `translateX(calc(100vw * ${carouselCounter}))`;
 
 }
 
-previousButton.addEventListener('click', moveCarousel);
-nextButton.addEventListener('click', moveCarousel);
+if (location.pathname === '/') {
+    previousButton.addEventListener('click', moveCarousel);
+    nextButton.addEventListener('click', moveCarousel);
+}
 
 portfolioImages.forEach(image => {
     if (image.src.includes('portrait')) {
