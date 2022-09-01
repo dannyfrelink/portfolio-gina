@@ -34,7 +34,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-if (location.pathname === '/overmij' || location.pathname === '/tarieven') {
+if (location.pathname === '/overmij' || location.pathname.includes('/tarieven')) {
     navigation.classList.add('black_navigation');
     navigationSocialsImg.forEach(social => {
         social.src = social.src.split('-64').join('-64-black');
@@ -78,28 +78,38 @@ if (location.pathname === '/' || location.pathname === '/portfolio') {
 if (screen.width >= 1000) {
     if (location.pathname === '/overmij') {
         footer.classList.add('transform_footer_larger');
-    } else if (location.pathname === '/tarieven') {
+    } else if (location.pathname.includes('/tarieven')) {
         footer.classList.add('transform_footer_large');
     }
-} else if (screen.width < 1000) {
+} else {
+    navigationSocialsImg.forEach(social => {
+        social.src = social.src.split('-64').join('-64-black');
+    });
     if (location.pathname === '/overmij') {
         footer.classList.remove('transform_footer_larger');
-    } else if (location.pathname === '/tarieven') {
+    } else if (location.pathname.includes('/tarieven')) {
         footer.classList.remove('transform_footer_large');
     }
 }
 
 window.addEventListener('resize', () => {
     if (screen.width >= 1000) {
+        navigationSocialsImg.forEach(social => {
+            social.src = social.src.split('-black').join('');
+        });
         if (location.pathname === '/overmij') {
             footer.classList.add('transform_footer_larger');
-        } else if (location.pathname === '/tarieven') {
+        } else if (location.pathname.includes('/tarieven')) {
             footer.classList.add('transform_footer_large');
         }
-    } else if (screen.width < 1000) {
+    } else {
+        navigationSocialsImg.forEach(social => {
+            social.src = social.src.split('-black').join('');
+            social.src = social.src.split('-64').join('-64-black');
+        });
         if (location.pathname === '/overmij') {
             footer.classList.remove('transform_footer_larger');
-        } else if (location.pathname === '/tarieven') {
+        } else if (location.pathname.includes('/tarieven')) {
             footer.classList.remove('transform_footer_large');
         }
     }

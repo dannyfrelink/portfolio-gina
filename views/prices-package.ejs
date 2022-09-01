@@ -42,38 +42,40 @@
 
         <section class="links">
             <h2>Overige pakketten</h2>
-            <a href="/tarieven">
-                <img src="/assets/portrait-5.jpeg" alt="Bruiloft tarieven foto">
-                <div>
-                    <h2>Bruiloft tarieven<br>op maat</h2>
-                    <p>Meer informatie</p>
-                </div>
-            </a>
-            <% if(package!=='4 uur' ) { %>
-                <a href="/tarieven/4-uur">
-                    <img class="right" src="/assets/portrait-6.jpeg" alt="Portret foto">
+            <div>
+                <a href="/tarieven">
+                    <img src="/assets/portrait-5.jpeg" alt="Bruiloft tarieven foto">
                     <div>
-                        <h2>Tot 4 uur<br>fotografie</h2>
+                        <h2>Bruiloft tarieven<br>op maat</h2>
                         <p>Meer informatie</p>
                     </div>
                 </a>
-                <% } if(package!=='2 uur' ) { %>
-                    <a href="/tarieven/2-uur">
-                        <img src="/assets/portrait-7.jpeg" alt="Portret foto">
+                <% if(package!=='4 uur' ) { %>
+                    <a href="/tarieven/4-uur">
+                        <img class="right" src="/assets/portrait-6.jpeg" alt="Portret foto">
                         <div>
-                            <h2>Tot 2 uur<br>fotografie</h2>
+                            <h2>Tot 4 uur<br>fotografie</h2>
                             <p>Meer informatie</p>
                         </div>
                     </a>
-                    <% } if(package!=='1 uur' ) { %>
-                        <a href="/tarieven/1-uur">
-                            <img class="left" src="/assets/portrait-8.jpeg" alt="Portret foto">
+                    <% } if(package!=='2 uur' ) { %>
+                        <a href="/tarieven/2-uur">
+                            <img src="/assets/portrait-7.jpeg" alt="Portret foto">
                             <div>
-                                <h2>Tot 1 uur<br>fotografie</h2>
+                                <h2>Tot 2 uur<br>fotografie</h2>
                                 <p>Meer informatie</p>
                             </div>
                         </a>
-                        <% } %>
+                        <% } if(package!=='1 uur' ) { %>
+                            <a href="/tarieven/1-uur">
+                                <img class="left" src="/assets/portrait-8.jpeg" alt="Portret foto">
+                                <div>
+                                    <h2>Tot 1 uur<br>fotografie</h2>
+                                    <p>Meer informatie</p>
+                                </div>
+                            </a>
+                            <% } %>
+            </div>
         </section>
     </main>
 
