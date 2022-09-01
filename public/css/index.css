@@ -217,26 +217,43 @@ header #carousel div div #next::before {
     content: '\203A';
 }
 
-header #carousel div:nth-of-type(2) {
+header #carousel ul {
+    position: relative;
+    width: 100vw;
+    height: clamp(27.375rem, 102.817vw, 83rem);
     max-height: 92vh;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
+    z-index: -1;
+
 }
 
-header #carousel div img {
-    height: clamp(27.375rem, 102.817vw, 83rem);
-    width: 100vw !important;
+header #carousel ul li {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    opacity: 0;
+    transition: 1s opacity;
+
+}
+
+header #carousel ul li.show {
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+header #carousel ul li img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-header #carousel div img.left {
+header #carousel ul li img.left {
     object-position: 30% 50%;
 }
 
-header #carousel div img.right {
-    object-position: 90% 50%;
+header #carousel ul li img.right {
+    object-position: 90% 0%;
 }
 
 main #review,
