@@ -31,10 +31,19 @@ hamburgerMenu.addEventListener('click', () => {
 
 if (location.pathname === '/' || location.pathname === '/portfolio') {
     footer.classList.add('transform_footer');
-} else if (screen.width >= 1000) {
-    footer.classList.add('transform_footer_large');
+}
+if (screen.width >= 1000) {
+    if (location.pathname === '/overmij') {
+        footer.classList.add('transform_footer_larger');
+    } else if (location.pathname === '/tarieven') {
+        footer.classList.add('transform_footer_large');
+    }
 } else if (screen.width < 1000) {
-    footer.classList.remove('transform_footer_large');
+    if (location.pathname === '/overmij') {
+        footer.classList.remove('transform_footer_larger');
+    } else if (location.pathname === '/tarieven') {
+        footer.classList.remove('transform_footer_large');
+    }
 }
 
 if (location.pathname === '/overmij' || location.pathname === '/tarieven') {
@@ -45,10 +54,16 @@ if (location.pathname === '/overmij' || location.pathname === '/tarieven') {
 }
 
 window.addEventListener('resize', () => {
-    if (location.pathname === '/overmij' || location.pathname === '/tarieven') {
-        if (screen.width >= 1000) {
+    if (screen.width >= 1000) {
+        if (location.pathname === '/overmij') {
+            footer.classList.add('transform_footer_larger');
+        } else if (location.pathname === '/tarieven') {
             footer.classList.add('transform_footer_large');
-        } else if (screen.width < 1000) {
+        }
+    } else if (screen.width < 1000) {
+        if (location.pathname === '/overmij') {
+            footer.classList.remove('transform_footer_larger');
+        } else if (location.pathname === '/tarieven') {
             footer.classList.remove('transform_footer_large');
         }
     }

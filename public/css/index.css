@@ -503,6 +503,10 @@ footer.transform_footer_large {
     margin-top: 5rem;
 }
 
+footer.transform_footer_larger {
+    margin-top: 7.5rem;
+}
+
 footer #footer_line {
     height: clamp(2rem, 7.512vw, 4.125rem);
     width: clamp(2px, 0.469vw, 3px);
@@ -670,7 +674,10 @@ footer>p {
         top: -16.8vw;
     }
 
-    #about_body main::before,
+    #about_body main::before {
+        bottom: -20.9vw;
+    }
+
     #prices_body main::before {
         bottom: -16.8vw;
     }
