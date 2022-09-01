@@ -62,6 +62,10 @@ app.get('/tarieven/:pakket', (req, res) => {
     res.render('prices-package', { package });
 });
 
+app.get('/bedankt', (req, res) => {
+    res.render('thanks');
+});
+
 app.use((req, res) => {
     res.status(404).send('Sorry, could not find the page you were looking for.');
 });

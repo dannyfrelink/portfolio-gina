@@ -549,6 +549,7 @@ footer form * {
 }
 
 footer form input[type="text"],
+footer form input[type="email"],
 textarea {
     font-family: inherit;
     border: unset;
@@ -599,9 +600,29 @@ footer>p {
     padding: clamp(0.5rem, 1.878vw, 0.9rem) 0 clamp(1rem, 3.756vw, 1.8rem);
 }
 
+#thanks_body header {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    color: black;
+}
 
+#thanks_body header #thanks_message {
+    position: absolute;
+    top: clamp(4rem, 15.023vw, 9.188rem);
+    width: 100vw;
+}
 
+#thanks_body header h1 {
+    width: 60%;
+    margin: 0 auto 1rem;
+}
 
+#thanks_body header p {
+    width: 60%;
+    margin: 0 auto;
+}
 
 @media(min-width: 1000px) {
     h3 {
@@ -722,6 +743,7 @@ footer>p {
     }
 
     footer form input[type="text"],
+    footer form input[type="email"],
     textarea {
         width: 42.5vw;
         max-width: 37.75rem;
@@ -735,7 +757,7 @@ footer>p {
         margin: 2.5rem auto 0;
     }
 
-    footer form input[type="text"]:first-of-type {
+    footer form input[type="text"] {
         margin: 0;
     }
 

@@ -34,7 +34,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-if (location.pathname === '/overmij' || location.pathname.includes('/tarieven')) {
+if (location.pathname === '/overmij' || location.pathname.includes('/tarieven') || location.pathname === '/bedankt') {
     navigation.classList.add('black_navigation');
     navigationSocialsImg.forEach(social => {
         social.src = social.src.split('-64').join('-64-black');
@@ -98,7 +98,7 @@ window.addEventListener('resize', () => {
             footer.classList.add('transform_footer_larger');
         } else if (location.pathname.includes('/tarieven')) {
             footer.classList.add('transform_footer_large');
-        } else {
+        } else if (location.pathname !== '/bedankt') {
             navigationSocialsImg.forEach(social => {
                 social.src = social.src.split('-black').join('');
             });
