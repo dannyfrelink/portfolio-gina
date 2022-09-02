@@ -44,15 +44,6 @@ a {
     color: unset;
 }
 
-a:hover,
-a:focus,
-header #carousel div div button:hover,
-header #carousel div div button:focus {
-    opacity: 1;
-    transform: scale(1.1);
-    transition: 0.2s transform;
-}
-
 h2 {
     font-size: var(--medium-text-size);
     font-weight: 500;
@@ -438,13 +429,6 @@ main #working_method div a {
     margin-top: clamp(1rem, 3.756vw, 1.8rem);
 }
 
-.about_section article a:hover,
-.about_section article a:focus,
-main #working_method div a:hover,
-main #working_method div a:focus {
-    background-color: var(--secondary-color);
-}
-
 #banner_photo {
     width: 85vw;
     height: clamp(11.25rem, 42.254vw, 22.5rem);
@@ -584,16 +568,10 @@ main #working_method div a {
     cursor: pointer;
     width: fit-content;
     background-color: unset;
+    color: black;
     border: clamp(1.5px, 0.352vw, 2.5px) solid black;
     border-radius: clamp(0.5rem, 1.878vw, 0.9rem);
     padding: clamp(0.25rem, 0.939vw, 0.45rem) clamp(0.6rem, 2.254vw, 1.08rem);
-}
-
-footer form input[type="submit"]:hover,
-footer form input[type="submit"]:focus {
-    background-color: var(--secondary-color);
-    transform: scale(1.1);
-    transition: 0.2s transform;
 }
 
 footer form input[type="submit"] {
@@ -786,5 +764,29 @@ footer>p {
 
     footer>div section {
         width: fit-content;
+    }
+
+    /* Hover states for desktop */
+    a:hover,
+    a:focus,
+    header #carousel div div button:hover,
+    header #carousel div div button:focus {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: 0.2s transform;
+    }
+
+    .about_section article a:hover,
+    .about_section article a:focus,
+    main #working_method div a:hover,
+    main #working_method div a:focus {
+        background-color: var(--secondary-color);
+    }
+
+    footer form input[type="submit"]:hover,
+    footer form input[type="submit"]:focus {
+        background-color: var(--secondary-color);
+        transform: scale(1.1);
+        transition: 0.2s transform;
     }
 }
