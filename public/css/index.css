@@ -108,6 +108,24 @@ header #hamburger_menu.open div:nth-of-type(3) {
 
 header #hamburger_menu.open~nav {
     display: block;
+    transform: translateY(0);
+    transition: 0.5s transform;
+}
+
+@keyframes scrollBlurNavigationIn {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+header #hamburger_menu.open~nav::before {
+    display: block;
+    animation-name: scrollBlurNavigationIn;
+    animation-duration: 0.5s;
 }
 
 header #hamburger_menu div {
@@ -120,11 +138,13 @@ header #hamburger_menu div {
 
 header nav {
     position: fixed;
-    display: none;
+    /* display: none; */
     width: 100vw;
     background-color: var(--secondary-color);
     color: black;
     box-shadow: 0 7.5px 30px;
+    transform: translateY(-100vh);
+    transition: 0.5s transform;
     padding: 4rem 0 3rem;
     z-index: 1;
 }
@@ -132,6 +152,7 @@ header nav {
 header nav::before {
     content: '';
     position: absolute;
+    display: none;
     height: 100vh;
     top: 0;
     right: 0;
@@ -643,6 +664,8 @@ footer>p {
         color: var(--primary-color);
         border-bottom: 2px solid var(--primary-color);
         box-shadow: unset;
+        transform: translateY(0);
+
         margin: 0 7.5vw;
         padding: 1.75rem 0;
     }
