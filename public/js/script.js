@@ -37,6 +37,17 @@ window.addEventListener('scroll', () => {
     }
 });
 
+if (window.scrollY >= 60) {
+    navigation.classList.add('scrolled_navigation');
+    if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
+        navigation.classList.add('black_navigation');
+        navigationSocialsImg.forEach(social => {
+            social.src = social.src.split('-black').join('');
+            social.src = social.src.split('-64').join('-64-black');
+        });
+    }
+}
+
 if (location.pathname === '/overmij' || location.pathname.includes('/tarieven') || location.pathname === '/bedankt') {
     navigation.classList.add('black_navigation');
     navigationSocialsImg.forEach(social => {
