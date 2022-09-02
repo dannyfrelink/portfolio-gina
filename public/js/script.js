@@ -15,7 +15,7 @@ hamburgerMenu.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-    if (screen.width >= 1000) {
+    if (window.innerWidth >= 1000) {
         if (window.scrollY >= 60) {
             navigation.classList.add('scrolled_navigation');
             if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
@@ -80,7 +80,7 @@ portfolioImages.forEach(image => {
 if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
     footer.classList.add('transform_footer');
 }
-if (screen.width >= 1000) {
+if (window.innerWidth >= 1000) {
     if (location.pathname === '/overmij') {
         footer.classList.add('transform_footer_larger');
     } else if (location.pathname.includes('/tarieven')) {
@@ -99,7 +99,7 @@ if (screen.width >= 1000) {
 }
 
 window.addEventListener('resize', () => {
-    if (screen.width >= 1000) {
+    if (window.innerWidth >= 1000) {
         if (location.pathname === '/overmij') {
             footer.classList.add('transform_footer_larger');
         } else if (location.pathname.includes('/tarieven')) {
