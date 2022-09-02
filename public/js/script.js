@@ -2,6 +2,9 @@ const hamburgerMenu = document.querySelector('#hamburger_menu');
 const navigation = document.querySelector('header nav');
 const navigationSocialsImg = document.querySelectorAll('header nav #socials a img');
 const contactLink = document.querySelector('header nav #contact_link');
+const languageSelector = document.querySelector('header nav #language');
+const languageSelectorCircle = document.querySelector('header nav #language #circle_selector');
+const languageSelectorOptions = document.querySelectorAll('header nav #language label');
 
 const carouselImages = document.querySelectorAll('#carousel ul li');
 const previousButton = document.querySelector('#carousel #previous');
@@ -57,6 +60,13 @@ if (location.pathname === '/overmij' || location.pathname.includes('/tarieven') 
 
 contactLink.addEventListener('click', () => {
     hamburgerMenu.classList.remove('open');
+});
+
+languageSelector.addEventListener('click', () => {
+    languageSelectorCircle.classList.toggle('left');
+    languageSelectorOptions.forEach(option => {
+        option.classList.toggle('hidden');
+    });
 });
 
 let carouselCounter = carouselImages.length - 1;
