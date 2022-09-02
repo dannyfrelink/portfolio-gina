@@ -1,6 +1,7 @@
 const hamburgerMenu = document.querySelector('#hamburger_menu');
 const navigation = document.querySelector('header nav');
 const navigationSocialsImg = document.querySelectorAll('header nav #socials a img');
+const contactLink = document.querySelector('header nav #contact_link');
 
 const carouselImages = document.querySelectorAll('#carousel ul li');
 const previousButton = document.querySelector('#carousel #previous');
@@ -14,22 +15,24 @@ hamburgerMenu.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-    if (screen.width >= 1000 && window.scrollY >= 60) {
-        navigation.classList.add('scrolled_navigation');
-        if (location.pathname === '/' || location.pathname === '/portfolio') {
-            navigation.classList.add('black_navigation');
-            navigationSocialsImg.forEach(social => {
-                social.src = social.src.split('-black').join('');
-                social.src = social.src.split('-64').join('-64-black');
-            });
-        }
-    } else {
-        navigation.classList.remove('scrolled_navigation');
-        if (location.pathname === '/' || location.pathname === '/portfolio') {
-            navigation.classList.remove('black_navigation');
-            navigationSocialsImg.forEach(social => {
-                social.src = social.src.split('-black').join('');
-            });
+    if (screen.width >= 1000) {
+        if (window.scrollY >= 60) {
+            navigation.classList.add('scrolled_navigation');
+            if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
+                navigation.classList.add('black_navigation');
+                navigationSocialsImg.forEach(social => {
+                    social.src = social.src.split('-black').join('');
+                    social.src = social.src.split('-64').join('-64-black');
+                });
+            }
+        } else {
+            navigation.classList.remove('scrolled_navigation');
+            if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
+                navigation.classList.remove('black_navigation');
+                navigationSocialsImg.forEach(social => {
+                    social.src = social.src.split('-black').join('');
+                });
+            }
         }
     }
 });
@@ -41,8 +44,11 @@ if (location.pathname === '/overmij' || location.pathname.includes('/tarieven') 
     });
 }
 
-let carouselCounter = carouselImages.length - 1;
+contactLink.addEventListener('click', () => {
+    hamburgerMenu.classList.remove('open');
+});
 
+let carouselCounter = carouselImages.length - 1;
 const moveCarousel = (e) => {
     if (e.target.id === 'next') {
         carouselImages[carouselCounter].classList.remove('show');
@@ -58,7 +64,6 @@ const moveCarousel = (e) => {
         }
     }
     carouselImages[carouselCounter].classList.add('show');
-
 }
 
 if (location.pathname === '/') {
@@ -72,7 +77,7 @@ portfolioImages.forEach(image => {
     }
 });
 
-if (location.pathname === '/' || location.pathname === '/portfolio') {
+if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
     footer.classList.add('transform_footer');
 }
 if (screen.width >= 1000) {
@@ -82,13 +87,14 @@ if (screen.width >= 1000) {
         footer.classList.add('transform_footer_large');
     }
 } else {
-    navigationSocialsImg.forEach(social => {
-        social.src = social.src.split('-64').join('-64-black');
-    });
     if (location.pathname === '/overmij') {
         footer.classList.remove('transform_footer_larger');
     } else if (location.pathname.includes('/tarieven')) {
         footer.classList.remove('transform_footer_large');
+    } else {
+        navigationSocialsImg.forEach(social => {
+            social.src = social.src.split('-64').join('-64-black');
+        });
     }
 }
 
