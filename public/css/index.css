@@ -664,6 +664,7 @@ footer>p {
         display: none;
     }
 
+
     header nav {
         display: flex;
         justify-content: space-evenly;
@@ -673,7 +674,7 @@ footer>p {
         border-bottom: 2px solid var(--primary-color);
         box-shadow: unset;
         transform: translateY(0);
-
+        transition: unset;
         margin: 0 7.5vw;
         padding: 1.75rem 0;
     }
@@ -706,12 +707,20 @@ footer>p {
         margin: 0;
     }
 
-    header nav>div:first-of-type {
+    header nav>div {
         display: flex;
         justify-content: center;
         flex-direction: row;
         height: 100%;
-        margin: 0;
+        margin: auto 0;
+    }
+
+    header nav>div:first-of-type {
+        margin: auto 0;
+    }
+
+    header nav>div:first-of-type a {
+        font-size: clamp(1.25rem, 2vw, 1.65rem);
     }
 
     header nav>div:first-of-type a+a {
@@ -723,11 +732,46 @@ footer>p {
     }
 
     header nav #socials a {
-        height: 1.6rem;
+        position: relative;
+        height: clamp(1.4rem, 2.24vw, 1.6rem);
+        width: clamp(1.4rem, 2.24vw, 1.6rem);
     }
 
     header nav #socials a+a {
         margin-left: clamp(0.9rem, 1.44vw, 1.4rem);
+    }
+
+    header nav #socials img {
+        position: absolute;
+        inset: 0;
+        width: clamp(1.4rem, 2.24vw, 1.7rem);
+    }
+
+    header nav #language {
+        cursor: pointer;
+        margin: 0 0 0 clamp(0.9rem, 1.44vw, 1.4rem);
+        border: clamp(1.5px, 0.15vw, 2.5px) solid black;
+        padding: clamp(0.15rem, 0.24vw, 0.27rem) clamp(0.5rem, 0.8vw, 0.9rem);
+    }
+
+    header nav #language * {
+        cursor: pointer;
+    }
+
+    header nav #language #circle_selector {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: clamp(0.3rem, 0.48vw, 0.54rem);
+        height: clamp(76.5%, 2.049vw, 84.75%);
+    }
+
+    header nav #language #circle_selector.left {
+        left: clamp(0.3rem, 0.48vw, 0.54rem);
+    }
+
+    header nav #language label {
+        font-size: clamp(0.875rem, 1.4vw, 1.3rem);
     }
 
     #about_body header::before,

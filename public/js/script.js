@@ -102,6 +102,7 @@ if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
     footer.classList.add('transform_footer');
 }
 if (window.innerWidth >= 1000) {
+    hamburgerMenu.classList.remove('open');
     if (location.pathname === '/overmij') {
         footer.classList.add('transform_footer_larger');
     } else if (location.pathname.includes('/tarieven')) {
@@ -121,6 +122,8 @@ if (window.innerWidth >= 1000) {
 
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 1000) {
+        hamburgerMenu.classList.remove('open');
+
         if (location.pathname === '/overmij') {
             footer.classList.add('transform_footer_larger');
         } else if (location.pathname.includes('/tarieven')) {
