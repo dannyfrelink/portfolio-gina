@@ -664,7 +664,6 @@ footer>p {
         display: none;
     }
 
-
     header nav {
         display: flex;
         justify-content: space-evenly;
@@ -682,6 +681,14 @@ footer>p {
     header nav.black_navigation {
         color: black;
         border-bottom: 2px solid black;
+    }
+
+    header nav.black_navigation #language {
+        border: clamp(1.5px, 0.15vw, 2.5px) solid black;
+    }
+
+    header nav.black_navigation #language #circle_selector {
+        background-color: black;
     }
 
     header nav.scrolled_navigation::after {
@@ -750,7 +757,7 @@ footer>p {
     header nav #language {
         cursor: pointer;
         margin: 0 0 0 clamp(0.9rem, 1.44vw, 1.4rem);
-        border: clamp(1.5px, 0.15vw, 2.5px) solid black;
+        border: clamp(1.5px, 0.15vw, 2.5px) solid var(--primary-color);
         padding: clamp(0.15rem, 0.24vw, 0.27rem) clamp(0.5rem, 0.8vw, 0.9rem);
     }
 
@@ -764,6 +771,7 @@ footer>p {
         bottom: 0;
         right: clamp(0.3rem, 0.48vw, 0.54rem);
         height: clamp(76.5%, 2.049vw, 84.75%);
+        background-color: var(--primary-color);
     }
 
     header nav #language #circle_selector.left {

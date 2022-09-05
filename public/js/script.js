@@ -114,7 +114,10 @@ if (window.innerWidth >= 1000) {
     } else if (location.pathname.includes('/tarieven')) {
         footer.classList.remove('transform_footer_large');
     } else {
+        console.log('test')
+
         navigationSocialsImg.forEach(social => {
+            social.src = social.src.split('-black').join('');
             social.src = social.src.split('-64').join('-64-black');
         });
     }
@@ -128,7 +131,7 @@ window.addEventListener('resize', () => {
             footer.classList.add('transform_footer_larger');
         } else if (location.pathname.includes('/tarieven')) {
             footer.classList.add('transform_footer_large');
-        } else if (location.pathname !== '/bedankt') {
+        } else if (location.pathname !== '/bedankt' && window.scrollY < 60) {
             navigationSocialsImg.forEach(social => {
                 social.src = social.src.split('-black').join('');
             });
