@@ -28,6 +28,7 @@ function shuffleArray(array) {
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
+// Dutch routes
 app.get('/', (req, res) => {
     res.render('home');
 });
@@ -58,6 +59,39 @@ app.get('/tarieven/:pakket', (req, res) => {
 
 app.get('/bedankt', (req, res) => {
     res.render('thanks');
+});
+
+// English routes
+app.get('/en', (req, res) => {
+    res.render('en/home');
+});
+
+app.get('/en/overmij', (req, res) => {
+    res.render('en/about');
+});
+
+app.get('/en/portfolio', async (req, res) => {
+    const protocol = req.protocol;
+    const host = req.headers.host;
+    const url = `${protocol}://${host}`;
+
+    const portfolioImages = await fetchPortfolioImages(url);
+    const shuffledPortfolioImages = await shuffleArray(portfolioImages);
+
+    res.render('en/portfolio', { shuffledPortfolioImages });
+});
+
+app.get('/en/tarieven', (req, res) => {
+    res.render('en/prices');
+});
+
+app.get('/en/tarieven/:pakket', (req, res) => {
+    const package = req.params.pakket.split('-').join(' ');
+    res.render('en/prices-package', { package });
+});
+
+app.get('/en/bedankt', (req, res) => {
+    res.render('en/thanks');
 });
 
 app.use((req, res) => {

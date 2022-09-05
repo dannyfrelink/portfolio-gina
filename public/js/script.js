@@ -53,7 +53,7 @@ if (window.scrollY >= 60) {
     }
 }
 
-if (location.pathname === '/overmij' || location.pathname.includes('/tarieven') || location.pathname === '/bedankt') {
+if (location.pathname.includes('/overmij') || location.pathname.includes('/tarieven') || location.pathname.includes('/bedankt')) {
     navigation.classList.add('black_navigation');
     navigationSocialsImg.forEach(social => {
         social.src = social.src.split('-64').join('-64-black');
@@ -112,13 +112,13 @@ if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
 }
 if (window.innerWidth >= 1000) {
     hamburgerMenu.classList.remove('open');
-    if (location.pathname === '/overmij') {
+    if (location.pathname.includes('/overmij')) {
         footer.classList.add('transform_footer_larger');
     } else if (location.pathname.includes('/tarieven')) {
         footer.classList.add('transform_footer_large');
     }
 } else {
-    if (location.pathname === '/overmij') {
+    if (location.pathname.includes('/overmij')) {
         footer.classList.remove('transform_footer_larger');
     } else if (location.pathname.includes('/tarieven')) {
         footer.classList.remove('transform_footer_large');
@@ -134,7 +134,7 @@ window.addEventListener('resize', () => {
     if (window.innerWidth >= 1000) {
         hamburgerMenu.classList.remove('open');
 
-        if (location.pathname === '/overmij') {
+        if (location.pathname.includes('/overmij')) {
             footer.classList.add('transform_footer_larger');
         } else if (location.pathname.includes('/tarieven')) {
             footer.classList.add('transform_footer_large');
@@ -148,7 +148,7 @@ window.addEventListener('resize', () => {
             social.src = social.src.split('-black').join('');
             social.src = social.src.split('-64').join('-64-black');
         });
-        if (location.pathname === '/overmij') {
+        if (location.pathname.includes('/overmij')) {
             footer.classList.remove('transform_footer_larger');
         } else if (location.pathname.includes('/tarieven')) {
             footer.classList.remove('transform_footer_large');
