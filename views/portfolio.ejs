@@ -1,143 +1,72 @@
 <%- include('layout/head'); %>
 
     <body>
-        <div class="nl">
-            <header>
-                <%- include('layout/nav'); %>
+        <header>
+            <%- include('layout/nav'); %>
 
-                    <section id="portfolio_header">
-                        <h1>Jullie bruiloft helemaal <br> naar wens vastgelegd!</h1>
-                        <img src="/assets/landscape-7.jpeg" alt="Wedding rings">
-                    </section>
-            </header>
-
-            <main class="transform_main">
-                <section id="working_method">
-                    <h2>Mijn werkwijze</h2>
-                    <p>
-                        Allereerst wil ik jullie feliciteren met jullie verloving! Het plannen van jullie bruiloft is nu
-                        aangebroken.
-                    </p>
-                    <p>
-                        Jullie bruiloft zit vol met mooie momenten. Allereerst de voorbereiding: aankleden, haar en
-                        make-up,
-                        sieraden om, parfum op. Daarna de first-look: jij en je partner zien elkaar voor het eerst in
-                        jullie
-                        prachtige trouwkleding.
-                    </p>
-                    <p>
-                        Tijdens de ceremonie, waar prachtige woorden gesproken worden, is het tijd voor het ja-woord.
-                        Dan
-                        volgt
-                        het ontvangst door vrienden en familie, waarnaar jullie samen naar het diner gaan. Afsluitend
-                        vieren
-                        jullie de liefde met het feest.
-                    </p>
-                    <p>
-                        Een belangrijke dag waar jullie graag op terug willen kijken met vreugde en een lach. Daarom is
-                        een
-                        fotograaf is een van de belangrijkste dingen voor jullie bruiloft.
-                    </p>
-                    <p>
-                        Het vastleggen van de spontane momenten en emotie, daar ligt mijn focus. Ik ben een fotograaf
-                        die
-                        mij
-                        het liefst een beetje op de achtergrond houd, zodat jullie optimaal kunnen genieten van het
-                        moment.
-                    </p>
-                    <p>
-                        Elke bruiloft is uniek, bijzonder en vol liefde. Een dag vol emoties, die ik graag zo mooi
-                        mogelijk
-                        voor
-                        jullie vastleg.
-                    </p>
-                    <div>
-                        <a href="">Whatsapp mij</a>
-                        <a href="/prices">Bruiloft tarieven</a>
-                    </div>
+                <section id="portfolio_header">
+                    <h1>Jullie bruiloft helemaal <br> naar wens vastgelegd!</h1>
+                    <img src="/assets/landscape-7.jpeg" alt="Wedding rings">
                 </section>
+        </header>
 
-                <section id="portfolio">
-                    <h3>Portfolio</h3>
-                    <div>
-                        <% shuffledPortfolioImages.forEach(function(image) { %>
-                            <img src="<%= image %>" alt="Portfolio image">
-                            <% }) %>
-                    </div>
-                </section>
-            </main>
+        <main class="transform_main">
+            <section id="working_method">
+                <h2>Mijn werkwijze</h2>
+                <p>
+                    Allereerst wil ik jullie feliciteren met jullie verloving! Het plannen van jullie bruiloft is nu
+                    aangebroken.
+                </p>
+                <p>
+                    Jullie bruiloft zit vol met mooie momenten. Allereerst de voorbereiding: aankleden, haar en
+                    make-up,
+                    sieraden om, parfum op. Daarna de first-look: jij en je partner zien elkaar voor het eerst in
+                    jullie
+                    prachtige trouwkleding.
+                </p>
+                <p>
+                    Tijdens de ceremonie, waar prachtige woorden gesproken worden, is het tijd voor het ja-woord.
+                    Dan
+                    volgt
+                    het ontvangst door vrienden en familie, waarnaar jullie samen naar het diner gaan. Afsluitend
+                    vieren
+                    jullie de liefde met het feest.
+                </p>
+                <p>
+                    Een belangrijke dag waar jullie graag op terug willen kijken met vreugde en een lach. Daarom is
+                    een
+                    fotograaf is een van de belangrijkste dingen voor jullie bruiloft.
+                </p>
+                <p>
+                    Het vastleggen van de spontane momenten en emotie, daar ligt mijn focus. Ik ben een fotograaf
+                    die
+                    mij
+                    het liefst een beetje op de achtergrond houd, zodat jullie optimaal kunnen genieten van het
+                    moment.
+                </p>
+                <p>
+                    Elke bruiloft is uniek, bijzonder en vol liefde. Een dag vol emoties, die ik graag zo mooi
+                    mogelijk
+                    voor
+                    jullie vastleg.
+                </p>
+                <div>
+                    <a href="">Whatsapp mij</a>
+                    <a href="/prices">Bruiloft tarieven</a>
+                </div>
+            </section>
 
-            <%- include('layout/contact'); %>
-        </div>
+            <section id="portfolio">
+                <h3>Portfolio</h3>
+                <div>
+                    <% shuffledPortfolioImages.forEach(function(image) { %>
+                        <img src="<%= image %>" alt="Portfolio image">
+                        <% }) %>
+                </div>
+            </section>
+        </main>
 
-        <div class="en">
-            <header>
-                <%- include('layout/nav'); %>
-
-                    <section id="portfolio_header">
-                        <h1>Jullie bruiloft helemaal <br> naar wens vastgelegd!</h1>
-                        <img src="/assets/landscape-7.jpeg" alt="Wedding rings">
-                    </section>
-            </header>
-
-            <main class="transform_main">
-                <section id="working_method">
-                    <h2>Mijn werkwijze</h2>
-                    <p>
-                        Allereerst wil ik jullie feliciteren met jullie verloving! Het plannen van jullie bruiloft is nu
-                        aangebroken.
-                    </p>
-                    <p>
-                        Jullie bruiloft zit vol met mooie momenten. Allereerst de voorbereiding: aankleden, haar en
-                        make-up,
-                        sieraden om, parfum op. Daarna de first-look: jij en je partner zien elkaar voor het eerst in
-                        jullie
-                        prachtige trouwkleding.
-                    </p>
-                    <p>
-                        Tijdens de ceremonie, waar prachtige woorden gesproken worden, is het tijd voor het ja-woord.
-                        Dan
-                        volgt
-                        het ontvangst door vrienden en familie, waarnaar jullie samen naar het diner gaan. Afsluitend
-                        vieren
-                        jullie de liefde met het feest.
-                    </p>
-                    <p>
-                        Een belangrijke dag waar jullie graag op terug willen kijken met vreugde en een lach. Daarom is
-                        een
-                        fotograaf is een van de belangrijkste dingen voor jullie bruiloft.
-                    </p>
-                    <p>
-                        Het vastleggen van de spontane momenten en emotie, daar ligt mijn focus. Ik ben een fotograaf
-                        die
-                        mij
-                        het liefst een beetje op de achtergrond houd, zodat jullie optimaal kunnen genieten van het
-                        moment.
-                    </p>
-                    <p>
-                        Elke bruiloft is uniek, bijzonder en vol liefde. Een dag vol emoties, die ik graag zo mooi
-                        mogelijk
-                        voor
-                        jullie vastleg.
-                    </p>
-                    <div>
-                        <a href="">Whatsapp mij</a>
-                        <a href="/prices">Bruiloft tarieven</a>
-                    </div>
-                </section>
-
-                <section id="portfolio">
-                    <h3>Portfolio</h3>
-                    <div>
-                        <% shuffledPortfolioImages.forEach(function(image) { %>
-                            <img src="<%= image %>" alt="Portfolio image">
-                            <% }) %>
-                    </div>
-                </section>
-            </main>
-
-            <%- include('layout/contact'); %>
-        </div>
+        <%- include('layout/contact'); %>
     </body>
 
     </html>

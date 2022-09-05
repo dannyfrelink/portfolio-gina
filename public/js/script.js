@@ -1,3 +1,5 @@
+const languageContent = document.querySelectorAll('body>div');
+
 const hamburgerMenu = document.querySelector('#hamburger_menu');
 const navigation = document.querySelector('header nav');
 const navigationSocialsImg = document.querySelectorAll('header nav #socials a img');
@@ -62,10 +64,17 @@ contactLink.addEventListener('click', () => {
     hamburgerMenu.classList.remove('open');
 });
 
+let language = 'nl';
+
 languageSelector.addEventListener('click', () => {
     languageSelectorCircle.classList.toggle('left');
     languageSelectorOptions.forEach(option => {
         option.classList.toggle('hidden');
+        if (!option.classList.contains('hidden')) {
+            language = option.id;
+        } else {
+            return
+        }
     });
 });
 
@@ -114,8 +123,6 @@ if (window.innerWidth >= 1000) {
     } else if (location.pathname.includes('/tarieven')) {
         footer.classList.remove('transform_footer_large');
     } else {
-        console.log('test')
-
         navigationSocialsImg.forEach(social => {
             social.src = social.src.split('-black').join('');
             social.src = social.src.split('-64').join('-64-black');
