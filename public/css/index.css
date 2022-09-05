@@ -164,7 +164,7 @@ header nav>div:first-of-type {
     margin-top: clamp(1rem, 3.756vw, 1.8rem);
 }
 
-header nav a {
+header nav div:first-of-type a {
     font-size: var(--medium-text-size);
     font-weight: 500;
     margin-top: clamp(0.5rem, 1.878vw, 0.9rem);
@@ -709,7 +709,7 @@ footer>p {
         border-bottom: unset;
     }
 
-    header nav a,
+    header nav div:first-of-type a,
     header nav #socials {
         margin: 0;
     }

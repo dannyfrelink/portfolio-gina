@@ -1,12 +1,10 @@
-const languageContent = document.querySelectorAll('body>div');
-
 const hamburgerMenu = document.querySelector('#hamburger_menu');
 const navigation = document.querySelector('header nav');
 const navigationSocialsImg = document.querySelectorAll('header nav #socials a img');
 const contactLink = document.querySelector('header nav #contact_link');
 const languageSelector = document.querySelector('header nav #language');
-const languageSelectorCircle = document.querySelector('header nav #language #circle_selector');
-const languageSelectorOptions = document.querySelectorAll('header nav #language label');
+// const languageSelectorCircle = document.querySelector('header nav #language #circle_selector');
+// const languageSelectorOptions = document.querySelectorAll('header nav #language label');
 
 const carouselImages = document.querySelectorAll('#carousel ul li');
 const previousButton = document.querySelector('#carousel #previous');
@@ -23,7 +21,7 @@ window.addEventListener('scroll', () => {
     if (window.innerWidth >= 1000) {
         if (window.scrollY >= 60) {
             navigation.classList.add('scrolled_navigation');
-            if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
+            if (location.pathname === '/' || location.pathname === '/en' || location.pathname.includes('/portfolio')) {
                 navigation.classList.add('black_navigation');
                 navigationSocialsImg.forEach(social => {
                     social.src = social.src.split('-black').join('');
@@ -32,7 +30,7 @@ window.addEventListener('scroll', () => {
             }
         } else {
             navigation.classList.remove('scrolled_navigation');
-            if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
+            if (location.pathname === '/' || location.pathname === '/en' || location.pathname.includes('/portfolio')) {
                 navigation.classList.remove('black_navigation');
                 navigationSocialsImg.forEach(social => {
                     social.src = social.src.split('-black').join('');
@@ -44,7 +42,7 @@ window.addEventListener('scroll', () => {
 
 if (window.scrollY >= 60) {
     navigation.classList.add('scrolled_navigation');
-    if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
+    if (location.pathname === '/' || location.pathname === '/en' || location.pathname.includes('/portfolio')) {
         navigation.classList.add('black_navigation');
         navigationSocialsImg.forEach(social => {
             social.src = social.src.split('-black').join('');
@@ -64,19 +62,21 @@ contactLink.addEventListener('click', () => {
     hamburgerMenu.classList.remove('open');
 });
 
-let language = 'nl';
+if (location.pathname.includes('/en')) {
+    let pathname = location.pathname.split('/en')[1];
+    if (pathname !== '') {
+        languageSelector.setAttribute('href', pathname);
+    } else {
+        languageSelector.setAttribute('href', '/');
+    }
+} else {
+    if (location.pathname !== '/') {
+        languageSelector.setAttribute('href', `/en${location.pathname}`);
+    } else {
+        languageSelector.setAttribute('href', '/en');
 
-languageSelector.addEventListener('click', () => {
-    languageSelectorCircle.classList.toggle('left');
-    languageSelectorOptions.forEach(option => {
-        option.classList.toggle('hidden');
-        if (!option.classList.contains('hidden')) {
-            language = option.id;
-        } else {
-            return
-        }
-    });
-});
+    }
+}
 
 let carouselCounter = carouselImages.length - 1;
 const moveCarousel = (e) => {
@@ -96,7 +96,7 @@ const moveCarousel = (e) => {
     carouselImages[carouselCounter].classList.add('show');
 }
 
-if (location.pathname === '/') {
+if (location.pathname === '/' || location.pathname === '/en') {
     previousButton.addEventListener('click', moveCarousel);
     nextButton.addEventListener('click', moveCarousel);
 }
@@ -107,7 +107,7 @@ portfolioImages.forEach(image => {
     }
 });
 
-if (location.pathname === '/' || location.pathname.includes('/portfolio')) {
+if (location.pathname === '/' || location.pathname === '/en' || location.pathname.includes('/portfolio')) {
     footer.classList.add('transform_footer');
 }
 if (window.innerWidth >= 1000) {
