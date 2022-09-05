@@ -1,91 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('layout/head'); %>
 
-<head>
-    <%- include('layout/head'); %>
-</head>
+    <body>
+        <header>
+            <%- include('layout/nav'); %>
 
-<body>
-    <header>
-        <%- include('layout/nav'); %>
-
-            <section id="carousel">
-                <div>
-                    <h1>Gina ten Hoope Photography</h1>
-                    <p>Professioneel bruidsfotograaf</p>
+                <section id="carousel">
                     <div>
-                        <button id="previous"></button>
-                        <button id="next"></button>
+                        <h1>Gina ten Hoope Photography</h1>
+                        <p>Professioneel bruidsfotograaf</p>
+                        <div>
+                            <button id="previous"></button>
+                            <button id="next"></button>
+                        </div>
                     </div>
-                </div>
-                <ul>
-                    <li>
-                        <img class="left" src="/assets/landscape-1.jpeg" alt="Carousel foto 1">
-                    </li>
-                    <li>
-                        <img src="/assets/landscape-2.jpeg" alt="Carousel foto 2">
-                    </li>
-                    <li>
-                        <img src="/assets/landscape-3.jpeg" alt="Carousel foto 3">
-                    </li>
-                    <li>
-                        <img src="/assets/landscape-4.jpeg" alt="Carousel foto 4">
-                    </li>
-                    <li>
-                        <img src="/assets/landscape-5.jpeg" alt="Carousel foto 5">
-                    </li>
-                    <li class="show">
-                        <img class="right" src="/assets/landscape-6.jpeg" alt="Carousel foto 6">
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <img class="left" src="/assets/landscape-1.jpeg" alt="Carousel foto 1">
+                        </li>
+                        <li>
+                            <img src="/assets/landscape-2.jpeg" alt="Carousel foto 2">
+                        </li>
+                        <li>
+                            <img src="/assets/landscape-3.jpeg" alt="Carousel foto 3">
+                        </li>
+                        <li>
+                            <img src="/assets/landscape-4.jpeg" alt="Carousel foto 4">
+                        </li>
+                        <li>
+                            <img src="/assets/landscape-5.jpeg" alt="Carousel foto 5">
+                        </li>
+                        <li class="show">
+                            <img class="right" src="/assets/landscape-6.jpeg" alt="Carousel foto 6">
+                        </li>
+                    </ul>
+                </section>
+        </header>
+
+        <main class="transform_main">
+            <section id="review">
+                <h2>
+                    “Momenten van nu vastleggen,<br>welke morgen je hart verbazen”
+                </h2>
+                <p>
+                    "Ik kan het niet anders samenvatten dan dat Gina een super goede fotografe is met oog voor detail!
+                    Ze
+                    stelt je echt op je gemak waardoor de foto’s geen gemaakt karakter krijgen.
+                </p>
+                <p>
+                    Wat ik zelf heel belangrijk vind dat is een fotograaf aanwezig is zonder dat je het merkt en dat is
+                    ze.
+                    Na bewerking spatte de kleuren echt van de foto. Wij zouden Gina zeker aanbevelen als
+                    (bruids)fotograaf
+                    en zijn heel blij met het eindresultaat.❤️"
+                </p>
+                <p>~Walter & Ilona</p>
             </section>
-    </header>
 
-    <main class="transform_main">
-        <section id="review">
-            <h2>
-                “Momenten van nu vastleggen,<br>welke morgen je hart verbazen”
-            </h2>
-            <p>
-                "Ik kan het niet anders samenvatten dan dat Gina een super goede fotografe is met oog voor detail! Ze
-                stelt je echt op je gemak waardoor de foto’s geen gemaakt karakter krijgen.
-            </p>
-            <p>
-                Wat ik zelf heel belangrijk vind dat is een fotograaf aanwezig is zonder dat je het merkt en dat is ze.
-                Na bewerking spatte de kleuren echt van de foto. Wij zouden Gina zeker aanbevelen als (bruids)fotograaf
-                en zijn heel blij met het eindresultaat.❤️"
-            </p>
-            <p>~Walter & Ilona</p>
-        </section>
+            <section class="links">
+                <div>
+                    <a href="/portfolio">
+                        <img src="/assets/portrait-2.jpeg" alt="Portret foto">
+                        <div>
+                            <h2>Bekijk meer van mijn<br>bruiloft fotografie</h2>
+                            <p>Bruiloft foto's bekijken</p>
+                        </div>
+                    </a>
+                    <a href="/overmij">
+                        <img src="/assets/portrait-1.jpeg" alt="Portret foto">
+                        <div>
+                            <h2>Leer mij wat<br>beter kennen</h2>
+                            <p>Meer over mij</p>
+                        </div>
+                    </a>
+                    <a href="/tarieven">
+                        <img src="/assets/portrait-3.jpeg" alt="Portret foto">
+                        <div>
+                            <h2>Wat zijn mijn<br>tarieven</h2>
+                            <p>Tarieven bekijken</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
 
-        <section class="links">
-            <div>
-                <a href="/portfolio">
-                    <img src="/assets/portrait-2.jpeg" alt="Portret foto">
-                    <div>
-                        <h2>Bekijk meer van mijn<br>bruiloft fotografie</h2>
-                        <p>Bruiloft foto's bekijken</p>
-                    </div>
-                </a>
-                <a href="/overmij">
-                    <img src="/assets/portrait-1.jpeg" alt="Portret foto">
-                    <div>
-                        <h2>Leer mij wat<br>beter kennen</h2>
-                        <p>Meer over mij</p>
-                    </div>
-                </a>
-                <a href="/tarieven">
-                    <img src="/assets/portrait-3.jpeg" alt="Portret foto">
-                    <div>
-                        <h2>Wat zijn mijn<br>tarieven</h2>
-                        <p>Tarieven bekijken</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </main>
+        <%- include('layout/contact'); %>
+    </body>
 
-    <%- include('layout/contact'); %>
-</body>
-
-</html>
+    </html>
