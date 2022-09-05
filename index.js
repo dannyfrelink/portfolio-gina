@@ -1,12 +1,6 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5151;
-// const compression = require('compression');
-// require('dotenv').config();
-// const http = require('http');
-// const server = http.createServer(app);
-// const { Server } = require('socket.io');
-// const io = new Server(server);
 const fetch = require('node-fetch');
 
 const fetchPortfolioImages = (url) => {
