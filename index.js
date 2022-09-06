@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 5151;
 const fetch = require('node-fetch');
 
-const fetchPortfolioImages = (url) => {
+const fetchPortfolioImages = (url, language) => {
     return fetch(`${url}/json/portfolio-images.json`)
         .then(res => res.json())
         .then(data => Object.values(data))
