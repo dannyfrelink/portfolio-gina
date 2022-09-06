@@ -3,8 +3,6 @@ const navigation = document.querySelector('header nav');
 const navigationSocialsImg = document.querySelectorAll('header nav #socials a img');
 const contactLink = document.querySelector('header nav #contact_link');
 const languageSelector = document.querySelector('header nav #language');
-// const languageSelectorCircle = document.querySelector('header nav #language #circle_selector');
-// const languageSelectorOptions = document.querySelectorAll('header nav #language label');
 
 const carouselImages = document.querySelectorAll('#carousel ul li');
 const previousButton = document.querySelector('#carousel #previous');
