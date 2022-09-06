@@ -4,71 +4,68 @@
         <header>
             <%- include('layout/nav'); %>
         </header>
-
-        <h6>Hello World!!!!!!!!!!!</h6>
-
         <main>
             <section class="about_section">
-                <% if(package=='4 uur' ) { %>
+                <% if(package=='4 hours' ) { %>
                     <img class="right" src="/assets/portrait-6.jpeg" alt="<%= package %> fotografie foto">
-                    <% } else if(package=='2 uur' ) { %>
+                    <% } else if(package=='2 hours' ) { %>
                         <img src="/assets/portrait-7.jpeg" alt="<%= package %> fotografie foto">
-                        <% } else if(package=='1 uur' ) { %>
+                        <% } else if(package=='1 hour' ) { %>
                             <img class="left" src="/assets/portrait-8.jpeg" alt="<%= package %> fotografie foto">
                             <% } %>
                                 <article>
                                     <h2>
-                                        Tot <%= package %> fotografie
+                                        Photography for <%= package %>
                                     </h2>
-                                    <% if(package=='4 uur' ) { %>
+                                    <% if(package=='4 hours' ) { %>
                                         <p>
-                                            Dit is 4 uur fotografie
+                                            This is 4 hours photography
                                         </p>
-                                        <% } else if(package=='2 uur' ) { %>
+                                        <% } else if(package=='2 hours' ) { %>
                                             <p>
-                                                Dit is 2 uur fotografie
+                                                This is 2 hours photography
                                             </p>
-                                            <% } else if(package=='1 uur' ) { %>
+                                            <% } else if(package=='1 hour' ) { %>
                                                 <p>
-                                                    Dit is 1 uur fotografie
+                                                    This is 1 hour photography
                                                 </p>
                                                 <% } %>
-                                                    <a href="#contact">Neem contact met mij op</a>
+                                                    <a href="#contact">Get in contact with me</a>
                                 </article>
             </section>
 
             <section class="links">
-                <h2>Overige pakketten</h2>
+                <h2>Other packages</h2>
                 <div>
-                    <a href="/tarieven">
+                    <a href="/en/tarieven">
                         <img src="/assets/portrait-5.jpeg" alt="Bruiloft tarieven foto">
                         <div>
-                            <h2>Bruiloft tarieven<br>op maat</h2>
-                            <p>Meer informatie</p>
+                            <h2>Custom<br>wedding rates</h2>
+                            <p>More information</p>
                         </div>
                     </a>
-                    <% if(package!=='4 uur' ) { %>
-                        <a href="/tarieven/4-uur">
+                    <% if(package!=='4 hours' ) { %>
+                        <a href="/en/tarieven/4-hours">
                             <img class="right" src="/assets/portrait-6.jpeg" alt="Portret foto">
                             <div>
-                                <h2>Tot 4 uur<br>fotografie</h2>
-                                <p>Meer informatie</p>
+                                <h2>Photography<br>for 4 hours</h2>
+                                <p>More information</p>
                             </div>
                         </a>
-                        <% } if(package!=='2 uur' ) { %>
-                            <a href="/tarieven/2-uur">
+                        <% } if(package!=='2 hours' ) { %>
+                            <a href="/en/tarieven/2-hours">
                                 <img src="/assets/portrait-7.jpeg" alt="Portret foto">
                                 <div>
-                                    <h2>Tot 2 uur<br>fotografie</h2>
-                                    <p>Meer informatie</p>
+                                    <h2>Photography<br>for 2 hours</h2>
+                                    <p>More information</p>
                                 </div>
                             </a>
-                            <% } if(package!=='1 uur' ) { %>
-                                <a href="/tarieven/1-uur">
+                            <% } if(package!=='1 hour' ) { %>
+                                <a href="/en/tarieven/1-hour">
                                     <img class="left" src="/assets/portrait-8.jpeg" alt="Portret foto">
                                     <div>
-                                        <h2>Tot 1 uur<br>fotografie</h2>
-                                        <p>Meer informatie</p>
+                                        <h2>Photography<br>for 1 hour</h2>
+                                        <p>More information</p>
                                     </div>
                                 </a>
                                 <% } %>
