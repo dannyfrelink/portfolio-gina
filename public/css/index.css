@@ -514,7 +514,10 @@ main #portfolio div {
 }
 
 main #portfolio img {
+    height: 100%;
     width: 20rem;
+    object-fit: cover;
+    object-position: center;
     margin: auto;
 }
 

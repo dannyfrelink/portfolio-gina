@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5151;
 const fetch = require('node-fetch');
+const compression = require('compression');
 
 const fetchPortfolioImages = (url, language) => {
     return fetch(`${url}/json/portfolio-images.json`)
@@ -25,6 +26,7 @@ function shuffleArray(array) {
     return array;
 }
 
+app.use(compression());
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
