@@ -8,11 +8,11 @@
         <main>
             <section class="about_section">
                 <% if(package=='4 uur' ) { %>
-                    <img class="right" src="/assets/portrait-6.jpeg" alt="<%= package %> fotografie foto">
+                    <img class="right" src="/assets/prices/4-hours.jpg" alt="Portret foto">
                     <% } else if(package=='2 uur' ) { %>
-                        <img src="/assets/portrait-7.jpeg" alt="<%= package %> fotografie foto">
+                        <img src="/assets/prices/2-hours.jpg" alt="Portret foto">
                         <% } else if(package=='1 uur' ) { %>
-                            <img class="left" src="/assets/portrait-8.jpeg" alt="<%= package %> fotografie foto">
+                            <img class="left" src="/assets/prices/1-hour.jpg" alt="Portret foto">
                             <% } %>
                                 <article>
                                     <h2>
@@ -39,7 +39,7 @@
                 <h2>Overige pakketten</h2>
                 <div>
                     <a href="/tarieven">
-                        <img src="/assets/portrait-5.jpeg" alt="Bruiloft tarieven foto">
+                        <img src="/assets/prices/wedding.jpg" alt="Bruiloft tarieven foto">
                         <div>
                             <h2>Bruiloft tarieven<br>op maat</h2>
                             <p>Meer informatie</p>
@@ -47,7 +47,7 @@
                     </a>
                     <% if(package!=='4 uur' ) { %>
                         <a href="/tarieven/4-uur">
-                            <img class="right" src="/assets/portrait-6.jpeg" alt="Portret foto">
+                            <img class="right" src="/assets/prices/4-hours.jpg" alt="Portret foto">
                             <div>
                                 <h2>Tot 4 uur<br>fotografie</h2>
                                 <p>Meer informatie</p>
@@ -55,7 +55,7 @@
                         </a>
                         <% } if(package!=='2 uur' ) { %>
                             <a href="/tarieven/2-uur">
-                                <img src="/assets/portrait-7.jpeg" alt="Portret foto">
+                                <img src="/assets/prices/2-hours.jpg" alt="Portret foto">
                                 <div>
                                     <h2>Tot 2 uur<br>fotografie</h2>
                                     <p>Meer informatie</p>
@@ -63,7 +63,7 @@
                             </a>
                             <% } if(package!=='1 uur' ) { %>
                                 <a href="/tarieven/1-uur">
-                                    <img class="left" src="/assets/portrait-8.jpeg" alt="Portret foto">
+                                    <img class="left" src="/assets/prices/1-hour.jpg" alt="Portret foto">
                                     <div>
                                         <h2>Tot 1 uur<br>fotografie</h2>
                                         <p>Meer informatie</p>
