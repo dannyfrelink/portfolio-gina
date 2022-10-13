@@ -502,7 +502,7 @@ main #portfolio {
     position: relative;
     background-color: var(--secondary-color);
     margin-top: clamp(1.375rem, 5.164vw, 2.475rem);
-    padding: clamp(3rem, 11.268vw, 5.4rem) 7.5vw;
+    padding: clamp(3rem, 11.268vw, 5.4rem) 7.5vw clamp(2.5rem, 9.39vw, 4.5rem);
 }
 
 main #portfolio div {
@@ -522,8 +522,32 @@ main #portfolio img {
     margin: auto;
 }
 
+main #portfolio img.hidden {
+    display: none;
+}
+
 main #portfolio img.portrait {
     grid-row-end: span 2;
+}
+
+main #portfolio button {
+    font-size: var(--small-text-size);
+    border: clamp(1.5px, 0.352vw, 2.5px) solid black;
+    margin-top: clamp(1rem, 3.756vw, 2.5rem);
+    border-radius: clamp(0.5rem, 1.878vw, 0.9rem);
+    background-color: unset;
+    padding: clamp(0.25rem, 0.939vw, 0.45rem) clamp(0.6rem, 2.254vw, 1.08rem);
+}
+
+main #portfolio button.hidden {
+    display: none;
+}
+
+main #portfolio button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s transform;
+    background-color: var(--overlay-color);
 }
 
 /* Prices page styling */

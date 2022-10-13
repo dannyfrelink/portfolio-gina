@@ -9,6 +9,7 @@ const previousButton = document.querySelector('#carousel #previous');
 const nextButton = document.querySelector('#carousel #next');
 
 const portfolioImages = document.querySelectorAll('#portfolio div img');
+const loadMoreButton = document.querySelector('#load_more');
 const footer = document.querySelector('footer');
 
 hamburgerMenu.addEventListener('click', () => {
@@ -99,9 +100,14 @@ if (location.pathname === '/' || location.pathname === '/en') {
     nextButton.addEventListener('click', moveCarousel);
 }
 
-portfolioImages.forEach(image => {
+let imageCounter = 9;
+portfolioImages.forEach((image, i) => {
     if (image.src.includes('portrait')) {
         image.classList.add('portrait');
+    }
+
+    if(i > imageCounter) {
+        image.classList.add('hidden');
     }
 });
 
@@ -151,5 +157,19 @@ window.addEventListener('resize', () => {
         } else if (location.pathname.includes('/tarieven')) {
             footer.classList.remove('transform_footer_large');
         }
+    }
+});
+
+loadMoreButton.addEventListener('click', () => {
+    imageCounter = imageCounter + 10;
+
+    portfolioImages.forEach((image, i) => {
+        if(i <= imageCounter) {
+            image.classList.remove('hidden');
+        }
+    });
+
+    if(imageCounter >= portfolioImages.length) {
+        loadMoreButton.classList.add('hidden');
     }
 });
