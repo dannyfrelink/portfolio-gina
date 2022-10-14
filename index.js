@@ -32,7 +32,7 @@ function shuffleArray(array) {
 }
 
 app.use(compression());
-app.use(express.static('public'));
+app.use(express.static('static'));
 app.set('view engine', 'ejs');
 
 // Dutch routes
