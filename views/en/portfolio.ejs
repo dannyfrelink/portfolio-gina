@@ -50,8 +50,10 @@
 
                 <div>
                     <% shuffledPortfolioImages.forEach(function(image) { %>
-                        <img src="../<%= image %>" alt="Portfolio image">
-                        <% }) %>
+                        <a href="/<%= image.replace('portfolio', 'original') %>">
+                            <img src="../<%= image %>" alt="Portfolio image">
+                            <% }) %>
+                        </a>
                 </div>
 
                 <button id="load_more">Load more</button>

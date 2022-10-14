@@ -18,7 +18,7 @@ hamburgerMenu.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     if (window.innerWidth >= 1000) {
-        if (window.scrollY >= 60) {
+        if (window.scrollY >= 50) {
             navigation.classList.add('scrolled_navigation');
             if (location.pathname === '/' || location.pathname === '/en' || location.pathname.includes('/portfolio')) {
                 navigation.classList.add('black_navigation');
@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-if (window.scrollY >= 60) {
+if (window.scrollY >= 50) {
     navigation.classList.add('scrolled_navigation');
     if (location.pathname === '/' || location.pathname === '/en' || location.pathname.includes('/portfolio')) {
         navigation.classList.add('black_navigation');
@@ -142,7 +142,7 @@ window.addEventListener('resize', () => {
             footer.classList.add('transform_footer_larger');
         } else if (location.pathname.includes('/tarieven')) {
             footer.classList.add('transform_footer_large');
-        } else if (location.pathname !== '/bedankt' && window.scrollY < 60) {
+        } else if (location.pathname !== '/bedankt' && window.scrollY < 50) {
             navigationSocialsImg.forEach(social => {
                 social.src = social.src.split('-black').join('');
             });
