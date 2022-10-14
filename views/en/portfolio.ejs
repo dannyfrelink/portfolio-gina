@@ -50,7 +50,7 @@
 
                 <div>
                     <% shuffledPortfolioImages.forEach(function(image) { %>
-                        <a href="/<%= image.replace('portfolio', 'original') %>">
+                        <a href="/<%= image.replace('/portfolio', 'original') %>">
                             <img src="../<%= image %>" alt="Portfolio image">
                             <% }) %>
                         </a>

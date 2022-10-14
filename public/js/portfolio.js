@@ -1,20 +1,22 @@
 let imageCounter = 9;
-portfolioImages.forEach((image, i) => {
+portfolioImages.forEach(image => {
     if (image.src.includes('portrait')) {
         image.classList.add('portrait');
     }
+});
 
+portfolioAnchors.forEach((a, i) => {
     if(i > imageCounter) {
-        image.classList.add('hidden');
+        a.classList.add('hidden');
     }
 });
 
 loadMoreButton.addEventListener('click', () => {
     imageCounter = imageCounter + 10;
 
-    portfolioImages.forEach((image, i) => {
+    portfolioAnchors.forEach((a, i) => {
         if(i <= imageCounter) {
-            image.classList.remove('hidden');
+            a.classList.remove('hidden');
         }
     });
 

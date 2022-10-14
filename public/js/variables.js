@@ -9,5 +9,6 @@ const previousButton = document.querySelector('#carousel #previous');
 const nextButton = document.querySelector('#carousel #next');
 
 const portfolioImages = document.querySelectorAll('#portfolio div img');
+const portfolioAnchors = document.querySelectorAll('#portfolio div a');
 const loadMoreButton = document.querySelector('#load_more');
 const footer = document.querySelector('footer');

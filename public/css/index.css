@@ -522,7 +522,7 @@ main #portfolio img {
     margin: auto;
 }
 
-main #portfolio img.hidden {
+main #portfolio div a.hidden {
     display: none;
 }
 
