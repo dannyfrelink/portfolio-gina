@@ -385,7 +385,7 @@ main #about_home {
 main #about_home article {
     width: 100%;
     text-align: left;
-    background-color: var(--secondary-color);
+    background-color: var(--overlay-color);
     height: fit-content;
     padding: clamp(1.375rem, 5.165vw, 2.75rem) clamp(1.25rem, 4.695vw, 2.5rem);
 }
@@ -422,7 +422,6 @@ main #about_home article p:not(:last-of-type) {
 .about_section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: left;
     width: 85vw;
     max-width: 70rem;
@@ -481,6 +480,11 @@ main #about_home article p:not(:last-of-type) {
 
 .about_section article p {
     margin-top: clamp(0.5rem, 1.878vw, 0.9rem);
+}
+
+.about_section article div {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .about_section article a,
@@ -844,7 +848,7 @@ footer>p {
     }
 
     main #about_home img {
-        margin-top: 4rem;
+        margin-top: 5rem;
     }
 
     #about_body header::before,
@@ -874,20 +878,16 @@ footer>p {
     }
 
     .about_section:first-of-type {
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
-    .about_section:first-of-type~*,
-    .about_section>*:last-child {
-        transform: translateY(5rem);
+    .about_section:first-of-type>*:last-child,
+    .about_section:last-of-type>*:first-child {
+        margin-top: 5rem;
     }
 
     .about_section img {
         width: clamp(30%, 25.5vw, 29.637rem);
-    }
-
-    #prices_body .about_section:first-of-type {
-        align-items: flex-start;
     }
 
     footer form input[type="text"],
