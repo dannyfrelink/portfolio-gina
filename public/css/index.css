@@ -376,6 +376,35 @@ main .links a div p {
     padding-bottom: clamp(0.3rem, 1.127vw, 0.54rem);
 }
 
+main #about_home {
+    width: 85vw;
+    max-width: 70rem;
+    margin: clamp(1.375rem,5.164vw,2.475rem) auto clamp(2.5rem, 9.39vw, 4.5rem);
+}
+
+main #about_home article {
+    width: 100%;
+    text-align: left;
+    background-color: var(--secondary-color);
+    height: fit-content;
+    padding: clamp(1.375rem, 5.165vw, 2.75rem) clamp(1.25rem, 4.695vw, 2.5rem);
+}
+
+main #about_home article h2 {
+    margin-bottom: clamp(0.5rem, 1.878vw, 0.9rem);
+}
+
+main #about_home article p:not(:last-of-type) {
+    margin-bottom: clamp(0.25rem, 0.939vw, 0.45rem);
+}
+
+#about_home img {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* About me page styling */
 #about_body header::before,
 #prices_body header::before {
@@ -808,6 +837,14 @@ footer>p {
 
     header nav #language label {
         font-size: clamp(0.875rem, 1.4vw, 1.3rem);
+    }
+
+    main #about_home {
+        display: flex;
+    }
+
+    main #about_home img {
+        margin-top: 4rem;
     }
 
     #about_body header::before,

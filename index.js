@@ -6,7 +6,7 @@ const compression = require('compression');
 
 // Vervangen met https://www.ginatenhoope.com/
 const fetchPortfolioImages = (url, language) => {
-    return fetch(`https://gina-ten-hoope-photography.herokuapp.com/json/portfolio-images.json`)
+    return fetch(`http://localhost:5151/json/portfolio-images.json`)
         .then(res => res.json())
         .then(data => Object.values(data))
         .catch(err => console.log(err));
