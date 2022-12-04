@@ -13,6 +13,8 @@
     "portrait-12": "/portfolio/portrait-12.webp",
     "portrait-13": "/portfolio/portrait-13.webp",
     "portrait-14": "/portfolio/portrait-14.webp",
+    "portrait-15": "/portfolio/portrait-15.webp",
+    "portrait-16": "/portfolio/portrait-16.webp",
 
     "landscape-1": "/portfolio/landscape-1.webp",
     "landscape-2": "/portfolio/landscape-2.webp",
@@ -35,5 +37,10 @@
     "landscape-19": "/portfolio/landscape-19.webp",
     "landscape-20": "/portfolio/landscape-20.webp",
     "landscape-21": "/portfolio/landscape-21.webp",
-    "landscape-22": "/portfolio/landscape-22.webp"
+    "landscape-22": "/portfolio/landscape-22.webp",
+    "landscape-23": "/portfolio/landscape-23.webp",
+    "landscape-24": "/portfolio/landscape-24.webp",
+    "landscape-25": "/portfolio/landscape-25.webp",
+    "landscape-26": "/portfolio/landscape-26.webp",
+    "landscape-27": "/portfolio/landscape-27.webp"
 }
