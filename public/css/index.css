@@ -383,7 +383,6 @@ main #about_home {
 }
 
 main #about_home article {
-    width: 100%;
     text-align: left;
     background-color: var(--overlay-color);
     height: fit-content;
@@ -400,7 +399,8 @@ main #about_home article p:not(:last-of-type) {
 
 #about_home img {
     width: 100%;
-    height: 35rem;
+    max-width: 29.637rem;
+    max-height: 35rem;
     object-fit: cover;
     object-position: center;
 }
@@ -845,6 +845,10 @@ footer>p {
 
     main #about_home {
         display: flex;
+    }
+
+    main #about_home article {
+        width: 100%;
     }
 
     main #about_home img {

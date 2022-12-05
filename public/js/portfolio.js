@@ -11,16 +11,18 @@ portfolioAnchors.forEach((a, i) => {
     }
 });
 
-loadMoreButton.addEventListener('click', () => {
-    imageCounter = imageCounter + 10;
+if(loadMoreButton) {
+    loadMoreButton.addEventListener('click', () => {
+        imageCounter = imageCounter + 10;
 
-    portfolioAnchors.forEach((a, i) => {
-        if(i <= imageCounter) {
-            a.classList.remove('hidden');
+        portfolioAnchors.forEach((a, i) => {
+            if(i <= imageCounter) {
+                a.classList.remove('hidden');
+            }
+        });
+
+        if(imageCounter >= portfolioImages.length) {
+            loadMoreButton.classList.add('hidden');
         }
     });
-
-    if(imageCounter >= portfolioImages.length) {
-        loadMoreButton.classList.add('hidden');
-    }
-});
+}
