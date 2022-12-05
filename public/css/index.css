@@ -383,6 +383,8 @@ main #about_home {
 }
 
 main #about_home article {
+    max-width: calc(40.509rem - (clamp(1.25rem,4.695vw,2.5rem)*2));
+    margin: auto;
     text-align: left;
     background-color: var(--overlay-color);
     height: fit-content;
@@ -422,6 +424,7 @@ main #about_home article p:not(:last-of-type) {
 .about_section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: left;
     width: 85vw;
     max-width: 70rem;
@@ -849,6 +852,7 @@ footer>p {
 
     main #about_home article {
         width: 100%;
+        margin: 0;
     }
 
     main #about_home img {
@@ -879,6 +883,7 @@ footer>p {
     .about_section {
         flex-direction: row;
         justify-content: center;
+        align-items: flex-start;
     }
 
     .about_section:first-of-type {
