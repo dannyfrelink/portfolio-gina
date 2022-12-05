@@ -433,7 +433,7 @@ main #about_home article p:not(:last-of-type) {
 }
 
 .about_section:last-of-type {
-    padding-bottom: clamp(3rem, 11.267vw, 6.891rem);
+    padding-bottom: clamp(1.5rem,5.634vw,5rem);
 }
 
 #about_body main,
