@@ -8,31 +8,74 @@
         <main>
             <section class="about_section">
                 <% if(package=='4 uur' ) { %>
-                    <img class="right" src="/prices/4-hours.webp" alt="Portret foto">
+                    <img src="/prices/4-hours.webp" alt="Portret foto">
+                <% } else if(package=='2 uur' ) { %>
+                    <img src="/prices/2-hours.webp" alt="Portret foto">
+                <% } else if(package=='1 uur' ) { %>
+                    <img class="left" src="/prices/1-hour.webp" alt="Portret foto">
+                <% } %>
+                <article>
+                    <% if(package=='4 uur' ) { %>
+                        <h2>4 uur pakket / prijs €800</h2>
+                        <p>
+                            Jij wilt uitpakken!
+                        </p>
+                        <p>
+                            Je wilt een uitgebreide fotoshoot, waar jouw verjaardag van ontvangst tot afsluiter wordt vastgelegd. De feestelijke sfeer komt vol kleur over op beeld en wanneer het tijd is om te dansen, leg ik alles vast!
+                        </p>
+                        <p>
+                            Als al het feestgedruis over is en ik achter mijn laptop nog eens mag nagenieten, bewerk ik de foto’s met zorg. Je kan ze met veel plezier met iedereen delen.
+                        </p>
+                        <p>
+                            Je krijgt van mij een credit van 100 euro om afdrukken te bestellen of te gebruiken voor een album.
+                        </p>
+                        <p>
+                            Daarnaast geef ik je een extra credit voor het bestellen van een handgemaakt mini-album van 15 bij 15 cm (15 spreads), zodat je ook fysiek de foto’s er altijd bij kan pakken.
+                        </p>
+                        <p>
+                            Meer afdrukken of een uitgebreider album zijn te bestellen tegen een meerprijs. Vraag hiervoor naar de brochure.
+                        </p>
                     <% } else if(package=='2 uur' ) { %>
-                        <img src="/prices/2-hours.webp" alt="Portret foto">
-                        <% } else if(package=='1 uur' ) { %>
-                            <img class="left" src="/prices/1-hour.webp" alt="Portret foto">
-                            <% } %>
-                                <article>
-                                    <h2>
-                                        Tot <%= package %> fotografie
-                                    </h2>
-                                    <% if(package=='4 uur' ) { %>
-                                        <p>
-                                            Dit is 4 uur fotografie
-                                        </p>
-                                        <% } else if(package=='2 uur' ) { %>
-                                            <p>
-                                                Dit is 2 uur fotografie
-                                            </p>
-                                            <% } else if(package=='1 uur' ) { %>
-                                                <p>
-                                                    Dit is 1 uur fotografie
-                                                </p>
-                                                <% } %>
-                                                    <a href="#contact">Neem contact met mij op</a>
-                                </article>
+                        <h2>2 uur pakket / prijs €500</h2>
+                        <p>
+                            Jij wilt net iets meer...
+                        </p>
+                        <p>
+                            Je wilt meerdere outfits en/of meerdere locaties, zodat je veel variatie hebt met een professionele uitstraling. Je wilt wat meer foto’s.
+                        </p>
+                        <p>
+                            Samen kiezen wij de locatie, waardoor de foto’s in de goede sfeer worden vastgelegd. Ik leg jouw persoonlijkheid vast in de foto’s.
+                        </p>
+                        <p>
+                            Jij mag jouw foto’s zelf uitkiezen. Jij gaat ze uiteindelijk gebruiken, dus ik vind dat jij zelf de keuzes mag gaan maken. Ik ga jouw favorieten met zorg bewerken en ik lever ze af via de mail.
+                        </p>
+                        <p>
+                            Ook krijg je van mij een credit van 100 euro om afdrukken te bestellen of te gebruiken voor een album.
+                        </p>
+                        <p>
+                            Afdrukken of albums zijn te bestellen tegen een meerprijs. Vraag hiervoor naar de brochure.
+                        </p>
+
+                    <% } else if(package=='1 uur' ) { %>
+                        <h2>1 uur pakket / prijs €300</h2>
+                        <p>
+                            Jij hebt genoeg aan 1 uur fotografie en 20 digitale foto’s!
+                        </p>
+                        <p>
+                            Je wilt een korte shoot, waarna je genoeg materiaal heb om jouw social media op te frissen en een professionele look te geven.
+                        </p>
+                        <p>
+                            Samen kiezen wij de locatie, waardoor de foto’s in de goede sfeer worden vastgelegd. Ik ga je binnen dit uur van jouw beste kant laten zien!
+                        </p>
+                        <p>
+                            Jij mag jouw foto’s zelf uitkiezen. Jij gaat ze uiteindelijk gebruiken, dus ik vind dat jij zelf de keuzes mag gaan maken. Ik ga jouw favorieten met zorg bewerken en ik lever ze af via de mail.
+                        </p>
+                        <p>
+                            *Extra digitale foto's bij bestellen is mogelijk vanaf 25 euro per stuk. Afdrukken of albums zijn te bestellen tegen een meerprijs. Vraag hiervoor naar de brochure.
+                        </p>
+                    <% } %>
+                    <a href="#contact">Neem contact met mij op</a>
+                </article>
             </section>
 
             <section class="links">
@@ -47,29 +90,29 @@
                     </a>
                     <% if(package!=='4 uur' ) { %>
                         <a href="/tarieven/4-uur">
-                            <img class="right" src="/prices/4-hours.webp" alt="Portret foto">
+                            <img src="/prices/4-hours.webp" alt="Portret foto">
                             <div>
                                 <h2>Tot 4 uur<br>fotografie</h2>
                                 <p>Meer informatie</p>
                             </div>
                         </a>
-                        <% } if(package!=='2 uur' ) { %>
-                            <a href="/tarieven/2-uur">
-                                <img src="/prices/2-hours.webp" alt="Portret foto">
-                                <div>
-                                    <h2>Tot 2 uur<br>fotografie</h2>
-                                    <p>Meer informatie</p>
-                                </div>
-                            </a>
-                            <% } if(package!=='1 uur' ) { %>
-                                <a href="/tarieven/1-uur">
-                                    <img class="left" src="/prices/1-hour.webp" alt="Portret foto">
-                                    <div>
-                                        <h2>Tot 1 uur<br>fotografie</h2>
-                                        <p>Meer informatie</p>
-                                    </div>
-                                </a>
-                                <% } %>
+                    <% } if(package!=='2 uur' ) { %>
+                        <a href="/tarieven/2-uur">
+                            <img src="/prices/2-hours.webp" alt="Portret foto">
+                            <div>
+                                <h2>Tot 2 uur<br>fotografie</h2>
+                                <p>Meer informatie</p>
+                            </div>
+                        </a>
+                    <% } if(package!=='1 uur' ) { %>
+                        <a href="/tarieven/1-uur">
+                            <img src="/prices/1-hour.webp" alt="Portret foto">
+                            <div>
+                                <h2>Tot 1 uur<br>fotografie</h2>
+                                <p>Meer informatie</p>
+                            </div>
+                        </a>
+                    <% } %>
                 </div>
             </section>
         </main>
