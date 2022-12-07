@@ -554,12 +554,11 @@ main #portfolio div {
 }
 
 main #portfolio a {
-    grid-column: span 1;
-    grid-row: span 1;
+    margin: auto;
+    height: 100%;
 }
 
 main #portfolio a.portrait {
-    grid-column: span 1;
     grid-row: span 2;
 }
 
@@ -568,8 +567,6 @@ main #portfolio div a.hidden {
 }
 
 main #portfolio img {
-    position: relative;
-    /* height: auto; */
     height: 100%;
     width: 20rem;
     object-fit: cover;
