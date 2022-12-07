@@ -6,7 +6,7 @@
 
                 <section id="portfolio_header">
                     <h1>Jullie bruiloft helemaal <br> naar wens vastgelegd</h1>
-                    <img src="/portfolio/landing.webp" alt="Bruiloft Ringen Foto">
+                    <img src="/_portfolio/landing.webp" alt="Bruiloft Ringen Foto">
                 </section>
         </header>
 
@@ -62,7 +62,7 @@
 
                 <div>
                     <% portfolioImages.forEach(function(image) { %>
-                        <a href="/<%= image.replace('/portfolio', 'original').replace('webp', 'jpg') %>">
+                        <a href="/<%= image.replace('/portfolio', '_original').replace('webp', 'jpg') %>">
                             <img src="<%= image %>" alt="Portfolio image">
                         </a>
                         <% }) %>
