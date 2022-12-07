@@ -62,7 +62,7 @@
 
                 <div>
                     <% portfolioImages.forEach(function(image) { %>
-                        <a href="/<%= image.replace('/portfolio', '_original').replace('webp', 'jpg') %>">
+                        <a href="/<%= image.replace('/portfolio', '_original') %>">
                             <img src="<%= image %>" alt="Portfolio image">
                         </a>
                         <% }) %>
