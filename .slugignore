@@ -2,3 +2,8 @@ package-lock.json
 /static
 /node_modules
 .git
+README.md
+.DS_Store
+.
+..
+LICENSE
