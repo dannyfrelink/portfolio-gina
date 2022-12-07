@@ -68,6 +68,7 @@ header {
 }
 
 header #hamburger_menu {
+    cursor: pointer;
     position: fixed;
     top: clamp(1.25rem, 4.695vw, 2.25rem);
     right: 7.5vw;
@@ -186,12 +187,17 @@ header nav #socials a+a {
 }
 
 header nav #language {
+    cursor: pointer;
     position: relative;
     width: fit-content;
     border: clamp(1.5px, 0.352vw, 2.5px) solid black;
     border-radius: 10rem;
     margin-top: clamp(0.5rem, 1.878vw, 0.9rem);
     padding: clamp(0.15rem, 0.564vw, 0.27rem) clamp(0.5rem, 1.878vw, 0.9rem);
+}
+
+header nav #language * {
+    cursor: pointer;
 }
 
 header nav #language #circle_selector {
@@ -827,14 +833,9 @@ footer>p {
     }
 
     header nav #language {
-        cursor: pointer;
         margin: 0 0 0 clamp(0.9rem, 1.44vw, 1.4rem);
         border: clamp(1.5px, 0.15vw, 2.5px) solid var(--primary-color);
         padding: clamp(0.15rem, 0.24vw, 0.27rem) clamp(0.5rem, 0.8vw, 0.9rem);
-    }
-
-    header nav #language * {
-        cursor: pointer;
     }
 
     header nav #language #circle_selector {
