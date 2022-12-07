@@ -12,10 +12,6 @@ const fetchPortfolioImages = (url) => {
         .catch(err => console.log(err));
 }
 
-// let portfolioImages;
-// fetchPortfolioImages()
-//     .then(img => portfolioImages = img);
-
 app.use(compression());
 app.use(express.static('static'));
 app.set('view engine', 'ejs');
