@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "serve -s index.js",
     "dev": "nodemon index.js",
     "build": "npm-run-all build:*",
     "build:css": "node build_scripts/build-css.js",
@@ -14,7 +14,8 @@
     "watch:css": "chokidar 'public/css/*.css' --command 'npm run build:css'",
     "watch:js": "chokidar 'public/js/*.js' --command 'npm run build:js'",
     "watch:assets": "chokidar 'public/**/*.*' --command 'npm run build:assets'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
     "node": "16.x"
@@ -43,6 +44,7 @@
     "compression": "^1.7.4",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "serve": "^14.1.2"
   }
 }
