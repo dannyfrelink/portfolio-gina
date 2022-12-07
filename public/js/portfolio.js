@@ -1,7 +1,7 @@
 let imageCounter = 9;
 portfolioImages.forEach(image => {
     if (image.src.includes('portrait')) {
-        image.classList.add('portrait');
+        image.parentNode.classList.add('portrait');
     }
 });
 

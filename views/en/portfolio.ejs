@@ -49,9 +49,9 @@
                 <h3>Portfolio</h3>
 
                 <div>
-                    <% shuffledPortfolioImages.forEach(function(image) { %>
-                        <a href="/<%= image.replace('/portfolio', 'original') %>">
-                            <img src="../<%= image %>" alt="Portfolio image">
+                    <% portfolioImages.forEach(function(image) { %>
+                        <a href="/<%= image.replace('/portfolio', 'original').replace('webp', 'jpg') %>">
+                            <img src="<%= image %>" alt="Portfolio image">
                             <% }) %>
                         </a>
                 </div>

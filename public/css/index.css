@@ -544,12 +544,23 @@ main #portfolio {
 main #portfolio div {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    /* grid-auto-flow: dense; */
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-rows: minmax(10rem, auto);
+    grid-auto-flow: dense;
     gap: clamp(1rem, 3.756vw, 2.5rem);
     width: 100%;
     max-width: 66rem;
     margin: auto;
+}
+
+main #portfolio a {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+main #portfolio a.portrait {
+    grid-column: span 1;
+    grid-row: span 2;
 }
 
 main #portfolio div a.hidden {
@@ -557,17 +568,13 @@ main #portfolio div a.hidden {
 }
 
 main #portfolio img {
+    position: relative;
     /* height: auto; */
     height: 100%;
     width: 20rem;
     object-fit: cover;
     object-position: center;
     margin: auto;
-}
-
-main #portfolio img.portrait {
-    /* height: 100%; */
-    grid-row-end: span 2;
 }
 
 main #portfolio button {

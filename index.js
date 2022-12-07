@@ -5,31 +5,16 @@ const fetch = require('node-fetch');
 const compression = require('compression');
 
 // Vervangen met https://www.ginatenhoope.com/
-const fetchPortfolioImages = (url, language) => {
-    return fetch(`http://localhost:5151/json/portfolio-images.json`)
+const fetchPortfolioImages = (url) => {
+    return fetch(`${url}/json/portfolio-images.json`)
         .then(res => res.json())
         .then(data => Object.values(data))
         .catch(err => console.log(err));
 }
 
-let portfolioImages;
-fetchPortfolioImages()
-    .then(img => portfolioImages = img);
-
-function shuffleArray(array) {
-    let currentIndex = array.length, randomIndex;
-
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-        // Pick a remaining element.
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
-    }
-    return array;
-}
+// let portfolioImages;
+// fetchPortfolioImages()
+//     .then(img => portfolioImages = img);
 
 app.use(compression());
 app.use(express.static('static'));
@@ -45,12 +30,12 @@ app.get('/overmij', (req, res) => {
 });
 
 app.get('/portfolio', async (req, res) => {
-    // const protocol = req.protocol;
-    // const host = req.headers.host;
-    // const url = `${protocol}://${host}`;
-    const shuffledPortfolioImages = await shuffleArray(portfolioImages);
+    const protocol = req.protocol;
+    const host = req.headers.host;
+    const url = `${protocol}://${host}`;
+    const portfolioImages = await fetchPortfolioImages(url);
 
-    res.render('portfolio', { shuffledPortfolioImages });
+    res.render('portfolio', { portfolioImages });
 });
 
 app.get('/tarieven', (req, res) => {
@@ -76,12 +61,12 @@ app.get('/en/overmij', (req, res) => {
 });
 
 app.get('/en/portfolio', async (req, res) => {
-    // const protocol = req.protocol;
-    // const host = req.headers.host;
-    // const url = `${protocol}://${host}`;
-    const shuffledPortfolioImages = await shuffleArray(portfolioImages);
+    const protocol = req.protocol;
+    const host = req.headers.host;
+    const url = `${protocol}://${host}`;
+    const portfolioImages = await fetchPortfolioImages(url);
 
-    res.render('en/portfolio', { shuffledPortfolioImages });
+    res.render('en/portfolio', { portfolioImages });
 });
 
 app.get('/en/tarieven', (req, res) => {
