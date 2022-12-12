@@ -8,6 +8,8 @@ if (location.pathname.includes('/en')) {
                 'href', 
                 newPath.includes('uurs') ? newPath.replace('uurs', 'uur') : newPath
             );
+        } else {
+            languageSelector.setAttribute('href', pathname);
         }
     } else {
         languageSelector.setAttribute('href', '/');
@@ -20,6 +22,8 @@ if (location.pathname.includes('/en')) {
                 'href', 
                 `/en${newPath.includes('1-hours') ? newPath.replace('hours', 'hour') : newPath}`
             );
+        } else {
+            languageSelector.setAttribute('href', `/en${location.pathname}`);
         }
     } else {
         languageSelector.setAttribute('href', '/en');
