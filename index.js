@@ -34,6 +34,12 @@ app.get('/portfolio', async (req, res) => {
     res.render('portfolio', { portfolioImages });
 });
 
+app.get('/portfolio/:image', async (req, res) => {
+    const image = req.params.image;
+
+    res.render('en/portfolio-detail', { image });
+});
+
 app.get('/tarieven', (req, res) => {
     res.render('prices');
 });
@@ -63,6 +69,12 @@ app.get('/en/portfolio', async (req, res) => {
     const portfolioImages = await fetchPortfolioImages(url);
 
     res.render('en/portfolio', { portfolioImages });
+});
+
+app.get('/en/portfolio/:image', async (req, res) => {
+    const image = req.params.image;
+
+    res.render('en/portfolio-detail', { image });
 });
 
 app.get('/en/tarieven', (req, res) => {

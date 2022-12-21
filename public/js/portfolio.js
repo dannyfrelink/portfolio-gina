@@ -26,3 +26,11 @@ if(loadMoreButton) {
         }
     });
 }
+
+if(portfolioDetailImage) {
+    if (portfolioDetailImage.src.includes('portrait')) {
+        portfolioDetailImage.classList.add('portrait');
+    } else {
+        portfolioDetailImage.classList.add('landscape');
+    }
+}
