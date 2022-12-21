@@ -6,32 +6,81 @@
         </header>
         <main>
             <section class="about_section">
-                <% if(package=='4 hours' ) { %>
-                    <img class="right" src="/_prices/4-hours.webp" alt="4 Hours Package Photo">
+                <% if(package=='4 hours') { %>
+                    <img src="/_prices/4-hours.webp" alt="4 Hours Package Photo">
+                <% } else if(package=='2 hours' ) { %>
+                    <img src="/_prices/2-hours.webp" alt="2 Hours Package Photo">
+                <% } else if(package=='1 hour' ) { %>
+                    <img class="left" src="/_prices/1-hour.webp" alt="1 Hour Package Photo">
+                <% } %>
+
+                <article>
+                    <h2>
+                        <%= package %> photography
+                    </h2>
+                    <% if(package=='4 hours' ) { %>
+                        <i>
+                            €800,-
+                        </i>
+                        <p>
+                            You want to go all-in!
+                        </p>
+                        <p>
+                            With this package I will photograph for 4 hours and you will receive 100 digital photos.
+                        </p>
+                        <p>
+                            You want an extensive photoshoot, in which the atmosphere of your day is fully brought out. Think of a party, conference, company drink or (sports) event.
+                        </p>
+                        <p>
+                            You will receive a credit of 100 euros from me to order prints or use them towards an album.
+                        </p>
+                        <p>
+                            In addition, I will give you an extra credit for ordering a handmade mini album of 15 by 15 cm (30 pages), so that you can always physically hold the photos.
+                        </p>
+                        <p>
+                            *Additional digital photos, prints or albums can be ordered at an additional cost. Please ask for the brochure.
+                        </p>
                     <% } else if(package=='2 hours' ) { %>
-                        <img src="/_prices/2-hours.webp" alt="2 Hours Package Photo">
-                        <% } else if(package=='1 hour' ) { %>
-                            <img class="left" src="/_prices/1-hour.webp" alt="1 Hour Package Photo">
-                            <% } %>
-                                <article>
-                                    <h2>
-                                        Photography for <%= package %>
-                                    </h2>
-                                    <% if(package=='4 hours' ) { %>
-                                        <p>
-                                            This is 4 hours photography
-                                        </p>
-                                        <% } else if(package=='2 hours' ) { %>
-                                            <p>
-                                                This is 2 hours photography
-                                            </p>
-                                            <% } else if(package=='1 hour' ) { %>
-                                                <p>
-                                                    This is 1 hour photography
-                                                </p>
-                                                <% } %>
-                                                    <a href="#contact">Get in contact with me</a>
-                                </article>
+                        <i>
+                            €500,-
+                        </i>
+                        <p>
+                            You want just a little more…
+                        </p>
+                        <p>
+                            With this package I will photograph for 2 hours and you will receive 50 digital photos.
+                        </p>
+                        <p>
+                            You want multiple outfits and/or locations, that will give you a lot of variation. Together we choose the location, so that the photos are captured in the right atmosphere. During the photoshoot I try to portray your personality beautifully.
+                        </p>
+                        <p>
+                            You will also receive a credit of 100 euros from me to order prints or use them towards an album.
+                        </p>
+                        <p>
+                            *Additional digital photos, prints or albums can be ordered at an additional cost. Please ask for the brochure.
+                        </p>
+                    <% } else if(package=='1 hour' ) { %>
+                        <i>
+                            €300,-
+                        </i>
+                        <p>
+                            You want to be efficient...
+                        </p>
+                        <p>
+                            You only need 1 hour of photography and 20 digital photos.
+                        </p>
+                        <p>
+                            Together we choose the location, so that the photos are captured in the right atmosphere. I'm going to show you your best side within this hour!
+                        </p>
+                        <p>
+                            You can choose your photos yourself. You're the one who is going to use them, so I think it's important that you make the decision. I'm going to edit your favorites with care and I'll deliver them via email.
+                        </p>
+                        <p>
+                            *Additional digital photos, prints or albums can be ordered at an additional cost. Please ask for the brochure.
+                        </p>
+                    <% } %>
+                    <a href="#contact">Get in contact with me</a>
+                </article>
             </section>
 
             <section class="links">
@@ -46,34 +95,33 @@
                     </a>
                     <% if(package!=='4 hours' ) { %>
                         <a href="/en/tarieven/4-hours">
-                            <img class="right" src="/_prices/4-hours.webp" alt="4 Hours Package Photo">
+                            <img src="/_prices/4-hours.webp" alt="4 Hours Package Photo">
                             <div>
-                                <h2>Photography<br>for 4 hours</h2>
+                                <h2>4 hours<br>photography</h2>
                                 <p>More information</p>
                             </div>
                         </a>
-                        <% } if(package!=='2 hours' ) { %>
-                            <a href="/en/tarieven/2-hours">
-                                <img src="/_prices/2-hours.webp" alt="2 Hours Package Photo">
-                                <div>
-                                    <h2>Photography<br>for 2 hours</h2>
-                                    <p>More information</p>
-                                </div>
-                            </a>
-                            <% } if(package!=='1 hour' ) { %>
-                                <a href="/en/tarieven/1-hour">
-                                    <img class="left" src="/_prices/1-hour.webp" alt="1 Hour Package Photo">
-                                    <div>
-                                        <h2>Photography<br>for 1 hour</h2>
-                                        <p>More information</p>
-                                    </div>
-                                </a>
-                                <% } %>
+                    <% } if(package!=='2 hours' ) { %>
+                        <a href="/en/tarieven/2-hours">
+                            <img src="/_prices/2-hours.webp" alt="2 Hours Package Photo">
+                            <div>
+                                <h2>2 hours<br>photography</h2>
+                                <p>More information</p>
+                            </div>
+                        </a>
+                    <% } if(package!=='1 hour' ) { %>
+                        <a href="/en/tarieven/1-hour">
+                            <img class="left" src="/_prices/1-hour.webp" alt="1 Hour Package Photo">
+                            <div>
+                                <h2>1 hour<br>photography</h2>
+                                <p>More information</p>
+                            </div>
+                        </a>
+                    <% } %>
                 </div>
             </section>
         </main>
 
         <%- include('layout/contact'); %>
     </body>
-
-    </html>
+</html>
