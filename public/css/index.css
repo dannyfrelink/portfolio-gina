@@ -132,7 +132,7 @@ header nav {
     background-color: var(--secondary-color);
     color: black;
     box-shadow: 0 7.5px 30px;
-    transform: translateY(-100vh);
+    transform: translateY(-300vh);
     transition: 0.5s transform;
     padding: 4rem 0 3rem;
     z-index: 1;
