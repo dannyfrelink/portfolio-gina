@@ -14,13 +14,15 @@
             <section id="portfolio">
                 <h3>Portfolio</h3>
 
-                <div>
-                    <% portfolioImages.forEach(function(image) { %>
-                        <a href="/portfolio/<%= image.replace('/_portfolio/', '') %>">
-                            <img src="<%= image %>" alt="Portfolio image">
-                        </a>
-                        <% }) %>
-                </div>
+                <% if(portfolioImages) { %>
+                    <div>
+                        <% portfolioImages.forEach(function(image) { %>
+                            <a href="/portfolio/<%= image.replace('/_portfolio/', '') %>">
+                                <img src="<%= image %>" alt="Portfolio image">
+                            </a>
+                            <% }) %>
+                    </div>
+                <% } %>
 
                 <button id="load_more">Laad Meer</button>
             </section>
