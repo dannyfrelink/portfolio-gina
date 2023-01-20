@@ -576,13 +576,13 @@ main #portfolio div {
 main #portfolio a {
     margin: auto;
     height: 100%;
-    min-height: 13.5rem;
+    min-height: 15rem;
     color: black;
 }
 
 main #portfolio a.portrait {
     grid-row: span 2;
-    min-height: 27rem;
+    min-height: 30rem;
 }
 
 main #portfolio div a.hidden {
