@@ -42,6 +42,10 @@ a {
     color: unset;
 }
 
+button {
+    color: unset
+}
+
 h2 {
     font-size: var(--medium-text-size);
     font-weight: 500;
