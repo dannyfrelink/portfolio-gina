@@ -138,6 +138,15 @@ header nav {
     z-index: 1;
 }
 
+@media(max-height: 550px) {
+    header nav {
+        overflow-y: scroll;
+        max-height: 70%;
+        /* overflow-y: unset;
+        max-height: unset; */
+    }
+}
+
 header nav::before {
     content: '';
     position: absolute;
