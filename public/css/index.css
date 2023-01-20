@@ -562,6 +562,7 @@ main #portfolio div {
 main #portfolio a {
     margin: auto;
     height: 100%;
+    color: black;
 }
 
 main #portfolio a.portrait {
