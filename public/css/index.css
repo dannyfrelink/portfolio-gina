@@ -552,7 +552,6 @@ main #portfolio div {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-template-rows: minmax(10rem, auto);
-    grid-auto-flow: dense;
     gap: clamp(1rem, 3.756vw, 2.5rem);
     width: 100%;
     max-width: 66rem;
