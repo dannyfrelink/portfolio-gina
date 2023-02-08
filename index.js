@@ -1,4 +1,5 @@
 const express = require("express");
+const enforce = require("express-sslify");
 const app = express();
 const PORT = process.env.PORT || 5151;
 const fetch = require("node-fetch");
@@ -11,6 +12,7 @@ const fetchPortfolioImages = (url) => {
     .catch((err) => console.log(err));
 };
 
+app.use(enforce.HTTPS());
 app.use(compression());
 app.use(express.static("static"));
 app.set("view engine", "ejs");
