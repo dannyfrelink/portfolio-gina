@@ -12,7 +12,7 @@ const fetchPortfolioImages = (url) => {
     .catch((err) => console.log(err));
 };
 
-app.use(enforce.HTTPS());
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(compression());
 app.use(express.static("static"));
 app.set("view engine", "ejs");
