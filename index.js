@@ -1,7 +1,7 @@
 const express = require("express");
 const enforce = require("express-sslify");
 const app = express();
-const PORT = process.env.PORT || 5151;
+const PORT = process.env.PORT || 8888;
 const fetch = require("node-fetch");
 const compression = require("compression");
 
@@ -12,7 +12,9 @@ const fetchPortfolioImages = (url) => {
     .catch((err) => console.log(err));
 };
 
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+if (process.env.NODE_ENV === "production") {
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+}
 app.use(compression());
 app.use(express.static("static"));
 app.set("view engine", "ejs");
